@@ -1,0 +1,22 @@
+---
+sidebar: sidebar 
+permalink: concept-privacy.html 
+keywords: privacy, data privacy, credentials, access to credentials, hashicorp vault 
+summary: ネットアップには、 Cloud Sync サービスの使用中に指定したクレデンシャルへのアクセス権がありません。クレデンシャルは、ネットワーク内のデータブローカーマシンに直接保存されます。 
+---
+= データのプライバシー
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+ネットアップには、 Cloud Sync サービスの使用中に指定したクレデンシャルへのアクセス権がありません。クレデンシャルは、ネットワーク内のデータブローカーマシンに直接保存されます。
+
+選択した設定によっては、新しい関係を作成するときに Cloud Sync によってクレデンシャルの入力が求められる場合があります。たとえば、 SMB サーバを含む関係を設定する場合や、 AWS にデータブローカーを導入する場合などです。
+
+これらのクレデンシャルは、常にデータブローカー自体に直接保存されます。データブローカーは、オンプレミスでもクラウドアカウントでも、ネットワーク上のマシンに配置されます。クレデンシャルがネットアップに提供されることはありません。
+
+クレデンシャルは、 HanCorp Vault を使用してデータブローカーマシンでローカルに暗号化されます。

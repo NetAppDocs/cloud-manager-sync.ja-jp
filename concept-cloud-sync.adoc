@@ -1,0 +1,75 @@
+---
+sidebar: sidebar 
+permalink: concept-cloud-sync.html 
+keywords: cloud sync, overview, conceptual, how, data broker, service, cloudsync 
+summary: ネットアップのクラウド同期サービスは、データをクラウド内や社内の任意のターゲットに移行するための、シンプルでセキュアな自動化された方法を提供します。 
+---
+= Cloud Sync の概要
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+ネットアップのクラウド同期サービスは、データをクラウド内や社内の任意のターゲットに移行するための、シンプルでセキュアな自動化された方法を提供します。ファイルベースの NAS データセット（ NFS または SMB ）、 Amazon Simple Storage Service （ S3 ）のオブジェクト形式、 NetApp StorageGRID ® アプライアンス、その他のクラウドプロバイダのオブジェクトストアのいずれであっても、 Cloud Sync は変換と移動を行うことができます。
+
+
+
+== の機能
+
+Cloud Sync の概要については、次のビデオをご覧ください。
+
+video::oZNJtLvgNfQ[youtube, width=848,height=480]
+
+
+== Cloud Sync の仕組み
+
+Cloud Sync は、データブローカーグループ、 Cloud Manager から提供されるクラウドベースのインターフェイス、ソースとターゲットで構成されるソフトウェアサービス（ SaaS ）プラットフォームです。
+
+次の図は、 Cloud Sync コンポーネント間の関係を示しています。
+
+image:diagram_cloud_sync_overview.gif["ソースからターゲットへのデータフローを示す概念図。データブローカーソフトウェアは仲介役として機能し、クラウド同期サービスをポーリングしてタスクを確認します。"]
+
+ネットアップのデータブローカーソフトウェアは、ソースからターゲットへデータを同期します（これを「 a_sync relationship_ 」と呼びます）。データブローカーは、 AWS 、 Azure 、 Google クラウドプラットフォーム、または社内で実行できます。1 つ以上のデータブローカーで構成されるデータブローカーグループには、 Cloud Sync サービスと通信して他のいくつかのサービスやリポジトリに接続するために、ポート 443 経由のアウトバウンドインターネット接続が必要です。 link:reference-networking.html["エンドポイントのリストを表示します。"]。
+
+最初のコピーの後、設定したスケジュールに基づいて変更されたデータが同期されます。
+
+
+
+== サポートされているストレージタイプ
+
+Cloud Sync でサポートされるストレージタイプは次のとおりです。
+
+* 任意の NFS サーバ
+* 任意の SMB サーバ
+* Amazon EFS
+* ONTAP 対応の Amazon FSX
+* Amazon S3
+* Azure Blob の略
+* Azure NetApp Files の特長
+* Box （プレビュー版として利用可能）
+* Cloud Volumes Service
+* Cloud Volumes ONTAP
+* Google クラウドストレージ
+* IBM クラウドオブジェクトストレージ
+* オンプレミスの ONTAP クラスタ
+* ONTAP S3 ストレージ
+* SFTP （ API のみを使用）
+* StorageGRID
+
+
+link:reference-supported-relationships.html["サポートされている同期関係を表示します"]。
+
+
+
+== コスト
+
+Cloud Sync の使用に関連するコストには、リソース料金とサービス料金の 2 種類があります。
+
+リソース料金:: リソースの料金は、 1 つ以上のデータブローカーをクラウドで実行する場合のコンピューティングとストレージのコストに関連します。
+サービス料金:: 14 日間の無料トライアル終了後に、同期関係の料金を支払う方法は 2 通りあります。1 つ目は、 AWS または Azure から登録する方法です。 AWS または Azure を利用すると、 1 時間ごとまたは 1 年ごとに料金を支払うことができます。2 つ目の選択肢は、ネットアップから直接ライセンスを購入することです。
+
+
+link:concept-licensing.html["ライセンスの仕組みをご確認ください"]。

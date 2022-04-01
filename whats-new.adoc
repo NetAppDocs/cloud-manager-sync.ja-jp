@@ -1,0 +1,387 @@
+---
+sidebar: sidebar 
+permalink: whats-new.html 
+keywords: 'what"s new, features, new, release notes, enhancements, fixes' 
+summary: Cloud Sync の新機能をご確認ください。 
+---
+= Cloud Sync の新機能
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Sync の新機能をご確認ください。
+
+
+
+== 2022 年 3 月 3 日
+
+
+
+=== ダッシュボードでソートします
+
+ダッシュボードを同期関係名でソートできるようになりました。
+
+image:screenshot-sync-sort.png["ダッシュボードで使用できる [ 名前でソート ] オプションを示すスクリーンショット。"]
+
+
+
+=== データセンスの統合の強化
+
+以前のリリースでは、 Cloud Sync とクラウドデータセンスの統合を導入しました。この更新プログラムでは、同期関係を簡単に作成できるように統合を強化しました。Cloud Data Sense からデータ同期を開始すると、すべてのソース情報が 1 つの手順で表示されるため、重要な情報をいくつか入力するだけで済みます。
+
+image:screenshot-sync-data-sense.png["Cloud Data Sense から直接新しい同期を開始した後に表示される Data Sense Integration ページを示すスクリーンショット。"]
+
+
+
+== 2022 年 2 月 6 日
+
+
+
+=== データブローカーグループの機能拡張
+
+データブローカーの操作方法は、 dataBroker_groups_を 強調するように変更されました。
+
+たとえば、新しい同期関係を作成する場合は、特定のデータブローカーではなく、データブローカーの _GROP_To がその関係で使用するように選択します。
+
+image:screenshot-sync-select-data-broker-group.png["データブローカーグループの選択を示す同期関係ウィザードのスクリーンショット。"]
+
+[ データブローカーの管理 *] タブには、データブローカーグループが管理している同期関係の数も表示されます。
+
+image:screenshot-sync-group-relationships.png["データブローカーグループの管理ページのスクリーンショット。管理しているリレーションシップの数など、データブローカーグループとそのグループの詳細が表示されます。"]
+
+
+
+=== PDF レポートをダウンロードできます
+
+レポートの PDF をダウンロードできるようになりました。
+
+link:task-managing-reports.html["レポートについては、こちらをご覧ください"]。
+
+
+
+== 2022 年 1 月 2 日
+
+
+
+=== 新しい Box 同期関係
+
+2 つの新しい同期関係がサポートされています。
+
+* Box to Azure NetApp Files の略
+* Box から Amazon FSX for ONTAP に移動します
+
+
+link:reference-supported-relationships.html["サポートされている同期関係のリストを表示します"]。
+
+
+
+=== 関係名
+
+同期関係ごとにわかりやすい名前を指定できるようになり、各関係の目的を簡単に特定できるようになりました。この名前は、関係の作成時および作成後にいつでも追加できます。
+
+image:screenshot-sync-relationship-edit-name.png["関係の名前の横にある編集ボタンを示す同期関係のスクリーンショット。"]
+
+
+
+=== S3 プライベートリンク
+
+Amazon S3 との間でデータを同期する際に、 S3 プライベートリンクを使用するかどうかを選択できます。データブローカーは、ソースからターゲットにデータをコピーする際、プライベートリンクを経由します。
+
+データブローカーに関連付けられている IAM ロールでは、この機能を使用するために次の権限が必要です。
+
+[source, json]
+----
+"ec2:DescribeVpcEndpoints"
+----
+この権限は、作成した新しいデータブローカーに自動的に追加されます。
+
+
+
+=== Glacier のインスタント検索
+
+Amazon S3 が同期関係のターゲットである場合に、 _Glacier Instant Retrieve_storage クラスを選択できるようになりました。
+
+
+
+=== オブジェクトストレージから SMB 共有への ACL
+
+Cloud Sync で、オブジェクトストレージから SMB 共有への ACL のコピーがサポートされるようになりました。これまでは、 SMB 共有からオブジェクトストレージへの ACL のコピーのみがサポートされていました。
+
+
+
+=== S3 への SFTP を使用します
+
+SFTP から Amazon S3 への同期関係の作成がユーザインターフェイスでサポートされるようになりました。この同期関係は、以前は API でのみサポートされていました。
+
+
+
+=== テーブルビューの拡張機能
+
+ダッシュボードのテーブルビューを再設計して使いやすくしました。詳細情報 * をクリックすると、ダッシュボードが Cloud Sync でフィルタされ、その関係に関する詳細情報が表示されます。
+
+image:screenshot-sync-table.png["ダッシュボードのテーブルビューのスクリーンショット。"]
+
+
+
+=== Jarkarta 地域のサポート
+
+Cloud Sync は、 AWS アジア太平洋（ジャカルタ）リージョンでのデータブローカーの導入をサポートするようになりました。
+
+
+
+== 2021 年 11 月 28 日
+
+
+
+=== SMB からオブジェクトストレージへの ACL
+
+ソースの SMB 共有からオブジェクトストレージ（ ONTAP S3 を除く）への同期関係を設定する際に、 Cloud Sync でアクセス制御リスト（ ACL ）をコピーできるようになりました。
+
+Cloud Sync では、オブジェクトストレージから SMB 共有への ACL のコピーはサポートされていません。
+
+link:task-copying-acls.html["SMB 共有から ACL をコピーする方法について説明します"]。
+
+
+
+=== ライセンスを更新します
+
+拡張した Cloud Sync ライセンスを更新できるようになりました。
+
+ネットアップから購入した Cloud Sync ライセンスを延長した場合は、ライセンスを再度追加して有効期限を更新できます。
+
+link:task-licensing.html#update-a-license["ライセンスを更新する方法について説明します"]。
+
+
+
+=== Box の資格情報を更新します
+
+既存の同期関係の Box クレデンシャルを更新できるようになりました。
+
+link:task-managing-relationships.html["クレデンシャルを更新する方法について説明します"]。
+
+
+
+== 2021 年 10 月 31 日
+
+
+
+=== ボックスサポート
+
+Cloud Sync ユーザーインターフェイスで Box サポートがプレビューとして利用できるようになりました。
+
+Box は、複数のタイプの同期関係のソースまたはターゲットにすることができます。 link:reference-supported-relationships.html["サポートされている同期関係のリストを表示します"]。
+
+
+
+=== 作成日の設定
+
+SMB サーバがソースの場合、 _Date Created _ という名前の新しい同期関係設定によって、特定の日付以前、特定の日付以前、または特定の時間範囲内に作成されたファイルを同期できます。
+
+link:task-managing-relationships.html["Cloud Sync 設定の詳細については、こちらをご覧ください"]。
+
+
+
+== 2021 年 10 月 4 日
+
+
+
+=== 追加のボックスサポート
+
+Cloud Sync で追加の同期関係がサポートされるようになりました https://www.box.com/home["ボックス"^] Cloud Sync API を使用する場合：
+
+* Amazon S3 の機能です
+* IBM Cloud Object Storage to Box の略
+* StorageGRID To Box の略
+* Box を NFS サーバに接続します
+* Box を SMB サーバーに追加します
+
+
+link:api-sync.html["API を使用して同期関係を設定する方法について説明します"]。
+
+
+
+=== SFTP パスに関するレポート
+
+* 次の操作を実行できます。 link:task-managing-reports.html["レポートを作成します"] SFTP パスの場合
+
+
+
+
+== 2021 年 9 月 2 日
+
+
+
+=== ONTAP の FSX のサポート
+
+Amazon FSX for ONTAP ファイルシステムとの間でデータを同期できるようになりました。
+
+* https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/concept-fsx-aws.html["Amazon FSX for ONTAP の詳細をご覧ください"^]
+* link:reference-requirements.html["サポートされている同期関係を表示する"]
+* link:task-creating-relationships.html["Amazon FSX for ONTAP の同期関係を作成する方法について説明します"]
+
+
+
+
+== 2021 年 8 月 1 日
+
+
+
+=== クレデンシャルを更新
+
+Cloud Sync で、既存の同期関係のソースまたはターゲットの最新のクレデンシャルを使用してデータブローカーを更新できるようになりました。
+
+この拡張機能は、セキュリティポリシーで定期的にクレデンシャルを更新するように要求される場合に役立ちます。 link:task-managing-relationships.html["クレデンシャルを更新する方法について説明します"]。
+
+image:screenshot_sync_update_credentials.png["ソースまたはターゲットの名前のすぐ下にある [ 関係の同期 ] ページの [ 資格情報の更新 ] オプションを示すスクリーンショット。"]
+
+
+
+=== オブジェクトストレージターゲットのタグ
+
+同期関係を作成するときに、同期関係内のオブジェクトストレージターゲットにタグを追加できるようになりました。
+
+タグの追加は、 Amazon S3 、 Azure Blob 、 Google Cloud Storage 、 IBM Cloud Object Storage 、および StorageGRID でサポートされています。
+
+image:screenshot_sync_tags.png["作業環境ウィザードのページを示すスクリーンショット。関係を構成するオブジェクトストレージターゲットに関係タグを追加できます。"]
+
+
+
+=== Box のサポート
+
+Cloud Sync は現在サポートされています https://www.box.com/home["ボックス"^] Cloud Sync API を使用する際に、 Amazon S3 、 StorageGRID 、 IBM Cloud Object Storage との同期関係のソースとして使用。
+
+link:api-sync.html["API を使用して同期関係を設定する方法について説明します"]。
+
+
+
+=== Google Cloud のデータブローカー用パブリック IP
+
+Google Cloud にデータブローカーを導入する際に、仮想マシンインスタンスに対してパブリック IP アドレスを有効にするか無効にするかを選択できるようになりました。
+
+link:task-installing-gcp.html["Google Cloud にデータブローカーを導入する方法をご確認ください"]。
+
+
+
+=== Azure NetApp Files 用のデュアルプロトコル・ボリューム
+
+Azure NetApp Files のソースボリュームまたはターゲットボリュームを選択した場合、同期関係用に選択したプロトコルに関係なく、 Cloud Sync にデュアルプロトコルボリュームが表示されるようになりました。
+
+
+
+== 2021 年 7 月 7 日
+
+
+
+=== ONTAP S3 ストレージと Google Cloud Storage
+
+Cloud Sync のユーザインターフェイスで、 ONTAP S3 ストレージと Google Cloud Storage バケットの間の同期関係がサポートされるようになりました。
+
+link:reference-supported-relationships.html["サポートされている同期関係のリストを表示します"]。
+
+
+
+=== オブジェクトメタデータタグ
+
+同期関係を作成して設定を有効にすると、 Cloud Sync でオブジェクトベースのストレージ間でオブジェクトのメタデータとタグをコピーできるようになりました。
+
+link:task-creating-relationships.html#settings["[ オブジェクトのコピー ] 設定の詳細については、を参照してください"]。
+
+
+
+=== 橋本事業者のためのサポート
+
+Google Cloud サービスアカウントで認証することで、外部の橋本 Vault からクレデンシャルにアクセスするようにデータブローカーを設定できるようになりました。
+
+link:task-external-vault.html["データブローカーでの橋 Corp Vault の使用の詳細を確認"]。
+
+
+
+=== S3 バケットのタグまたはメタデータを定義する
+
+Amazon S3 バケットとの同期関係を設定する際に、ターゲットの S3 バケット内のオブジェクトに保存するタグまたはメタデータを同期関係ウィザードで定義できるようになりました。
+
+タグ付けオプションは、以前は同期関係の設定に含まれていました。
+
+
+
+== 2021 年 6 月 7 日
+
+
+
+=== Google Cloud のストレージクラス
+
+同期関係のターゲットが Google Cloud Storage バケットの場合、使用するストレージクラスを選択できるようになりました。Cloud Sync では、次のストレージクラスがサポートされます。
+
+* 標準
+* ニアライン
+* コールドライン（ Coldline ）
+* Archive サービスの略
+
+
+
+
+== 2021 年 5 月 2 日
+
+
+
+=== レポート内のエラー
+
+レポートで見つかったエラーを表示し、最後のレポートまたはすべてのレポートを削除できるようになりました。
+
+link:task-managing-reports.html["レポートを作成して表示する方法の詳細については、を参照してください 設定"]。
+
+
+
+=== 属性を比較します
+
+同期関係ごとに新しい * Compare by * 設定を使用できるようになりました。
+
+この詳細設定では、ファイルまたはディレクトリが変更されたために再度同期する必要があるかどうかを判断するときに、 Cloud Sync で特定の属性を比較するかどうかを選択できます。
+
+link:task-managing-relationships.html#changing-the-settings-for-a-sync-relationship["同期関係の設定の変更の詳細については、こちらをご覧ください"]。
+
+
+
+== 2021 年 4 月 11 日
+
+
+
+=== スタンドアロンの Cloud Sync サービスは廃止されました
+
+スタンドアロンの Cloud Sync サービスは廃止されました。Cloud Sync には Cloud Manager から直接アクセスできるようになりました。同じ機能がすべて利用可能です。
+
+Cloud Manager にログインしたら、上部の Sync タブに切り替えて、以前と同様に関係を表示できます。
+
+
+
+=== さまざまなプロジェクトで Google Cloud バケットを使用できます
+
+同期関係を設定する際、データブローカーのサービスアカウントに必要な権限を指定している場合は、異なるプロジェクトの Google Cloud バケットから選択できます。
+
+link:task-installing-gcp.html["サービスアカウントの設定方法について説明します"]。
+
+
+
+=== Google Cloud Storage と S3 の間のメタデータ
+
+Cloud Sync は、 Google Cloud Storage と S3 プロバイダ（ AWS S3 、 StorageGRID 、 IBM Cloud Object Storage ）間でメタデータをコピーするようになりました。
+
+
+
+=== データブローカーを再起動
+
+Cloud Sync からデータブローカーを再起動できるようになりました。
+
+image:screenshot_sync_restart_data_broker.gif["データブローカーの管理ページからのデータブローカーの再起動アクションを示すスクリーンショット。"]
+
+
+
+=== 最新リリースを実行していない場合に表示されるメッセージです
+
+Cloud Sync は、データブローカーで最新のソフトウェアリリースが実行されていないことを確認できるようになりました。このメッセージは、最新の機能を確実に利用するために役立ちます。
+
+image:screenshot_sync_warning.gif["ダッシュボードでデータブローカーを表示したときに警告が表示されるスクリーンショット。"]
