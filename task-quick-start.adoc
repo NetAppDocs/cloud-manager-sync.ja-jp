@@ -15,7 +15,11 @@ summary: Cloud Sync サービスを開始するには、いくつかの手順を
 Cloud Sync サービスを開始するには、いくつかの手順を実行します。
 
 [role="quick-margin-para"]
-ソースとターゲットがサポートされ、セットアップされていることを確認します。最も重要な要件は、データブローカーグループと、ソースおよびターゲットの場所との間の接続を検証することです。 link:reference-requirements.html["詳細はこちら。"]。
+ソースとターゲットがサポートされ、セットアップされていることを確認します。最も重要な要件は、データブローカーグループと、ソースおよびターゲットの場所との間の接続を検証することです。
+
+* link:reference-supported-relationships.html["サポートされている関係を表示する"]
+* link:reference-requirements.html["ソースとターゲットを準備します"]
+
 
 [role="quick-margin-para"]
 ネットアップのデータブローカーソフトウェアは、ソースからターゲットへデータを同期します（これを「 a_sync relationship_ 」と呼びます）。データブローカーは、 AWS 、 Azure 、 Google クラウドプラットフォーム、または社内で実行できます。1 つ以上のデータブローカーで構成されるデータブローカーグループには、 Cloud Sync サービスと通信して他のいくつかのサービスやリポジトリに接続するために、ポート 443 経由のアウトバウンドインターネット接続が必要です。 link:reference-networking.html#networking-endpoints["エンドポイントのリストを表示します。"]。

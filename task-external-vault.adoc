@@ -224,7 +224,7 @@ x-netapp-external-request-id-src: request ID as part of path for source credenti
 x-netapp-external-request-id-trg: request ID as part of path for target credentials
 Body: post relationship v2 body
 ....
-* ユーザトークンと Cloud Central アカウント ID を取得するには、 link:api-sync.html["のドキュメントのこのページを参照してください"^]。
+* ユーザトークンと Cloud Central アカウント ID を取得するには、 link:api-sync.html["のドキュメントのこのページを参照してください"]。
 * 投稿関係の本文を作成するには、 https://api.cloudsync.netapp.com/docs/#/Relationships-v2/post_relationships_v2["relationships-v2 API 呼び出しを参照してください"^]。
 
 

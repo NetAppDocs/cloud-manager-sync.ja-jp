@@ -30,7 +30,7 @@ Cloud Sync の新機能をご確認ください。
 * 最後に、データブローカーグループを削除することもできます。
 
 
-https://docs.netapp.com/us-en/cloud-manager-sync/task_sync_managing_data_brokers.html["データブローカーグループの管理方法について説明します"]。
+https://docs.netapp.com/us-en/cloud-manager-sync/task-managing-data-brokers.html["データブローカーグループの管理方法について説明します"]。
 
 
 
@@ -231,8 +231,7 @@ link:api-sync.html["API を使用して同期関係を設定する方法につ�
 
 === SFTP パスに関するレポート
 
-* 次の操作を実行できます。 link:task-managing-reports.html["レポートを作成します"] SFTP パスの場合
-
+次の操作を実行できます。 link:task-managing-reports.html["レポートを作成します"] SFTP パスの場合
 
 
 
@@ -244,7 +243,7 @@ link:api-sync.html["API を使用して同期関係を設定する方法につ�
 
 Amazon FSX for ONTAP ファイルシステムとの間でデータを同期できるようになりました。
 
-* https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/concept-fsx-aws.html["Amazon FSX for ONTAP の詳細をご覧ください"^]
+* https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/start/concept-fsx-aws.html["Amazon FSX for ONTAP の詳細をご覧ください"^]
 * link:reference-requirements.html["サポートされている同期関係を表示する"]
 * link:task-creating-relationships.html["Amazon FSX for ONTAP の同期関係を作成する方法について説明します"]
 
