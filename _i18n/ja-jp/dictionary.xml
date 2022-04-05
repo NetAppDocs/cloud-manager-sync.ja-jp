@@ -21,9 +21,6 @@
   <block id="4e475c34f329c78e3aa3ab2a63cb63db" category="summary">データブローカーは、ソースの場所からターゲットの場所にデータを同期します。作成する同期関係ごとにデータブローカーが必要です。データブローカーを管理するには、新しいデータブローカーをグループに追加し、データブローカーに関する情報を表示します。</block>
   <block id="efdd49f1066bc795a31111d98cfa5ddf" category="doc">データブローカーグループの管理</block>
   <block id="e1191d25bbec84b8a1ba37471b41611f" category="paragraph">データブローカーグループは、ソースの場所からターゲットの場所にデータを同期します。作成する同期関係ごとに、少なくとも 1 つのデータブローカーがグループに必要です。グループに新しいデータブローカーを追加し、グループに関する情報を表示するなどして、データブローカーグループを管理します。</block>
-  <block id="46a5597bf1d0bb6131699943c8eb538a" category="section-title">データブローカーグループ</block>
-  <block id="0e1c5ff9805bc11c4b7d6e87af0fa93e" category="paragraph">データブローカーをグループ化すると、同期関係のパフォーマンスを向上させることができます。</block>
-  <block id="ca1c342e097dd2b8e437080a7f458f9f" category="section-title">グループ内のデータブローカーの数を確認</block>
   <block id="31361c8d27e70295df2bfa32fdeeb659" category="inline-link-macro">複数のデータブローカーがいつ行われるかを確認する方法については、こちらをご覧ください は必須です</block>
   <block id="0a134fa70f4699a5c8408ed138b7162b" category="paragraph">多くの場合、 1 つのデータブローカーで同期関係のパフォーマンス要件を満たすことができます。そうでない場合は、データブローカーをグループに追加することで、同期パフォーマンスを高速化できます。ただし、まず、同期のパフォーマンスに影響を与える可能性のある他の要因を確認する必要があります。 <block ref="871c8177954bc9fc0961cd3c58102f39" category="inline-link-macro-rx"></block>。</block>
   <block id="0a7fa5ebd880718dbd4c644fda59fb38" category="section-title">グループは複数の関係を管理できます</block>
@@ -33,9 +30,6 @@
   <block id="2da4190bfc656abd88eb058d61341d99" category="list-text">関係 2 はデータブローカーグループ B によって管理されます</block>
   <block id="1204be74d45a4ac703dc67fd6864e991" category="list-text">関係 3 は、データブローカーグループ A によって管理されます</block>
   <block id="2002e7315a54bdc5f69ae33f895b3361" category="paragraph">新しいデータブローカーをデータブローカーグループ A に追加するため、関係 1 のパフォーマンスを高速化したいと考えていますグループ A でも同期関係 3 が管理されるため、関係の同期パフォーマンスも自動的に高速化されます。</block>
-  <block id="4d1b0dd2ac6040283149ee4593c99dda" category="section-title">新しいデータブローカーのみ</block>
-  <block id="6f94d3194bf6ce158093332092d916d9" category="paragraph">新しいデータブローカーはグループにのみ追加できます。既存のデータブローカーをグループに追加することはできません。</block>
-  <block id="ecc57856a780d684b0fe0d4f158af18e" category="section-title">新しいデータブローカーを追加</block>
   <block id="8b0de93ef762269210bc193874b3d679" category="paragraph">新しいデータブローカーを作成するには、いくつかの方法があります。</block>
   <block id="3a3d1b7e5044442dcfbd5cd464cc3e74" category="list-text">新しい同期関係を作成する場合</block>
   <block id="d55c5ae4dbd0da4961b63d579f9712fd" category="inline-link-macro">作成時に新しいデータブローカーを作成する方法について説明します 同期関係</block>
@@ -62,7 +56,6 @@
   <block id="b20c8730a010d433fedb7241d0a0335a" category="list-title">既存のグループにデータブローカーを作成する手順</block>
   <block id="9c129f9a970d427b507541a4c3a7e53a" category="list-text">アクションメニューをクリックし、 * データブローカーの追加 * を選択します。</block>
   <block id="b65b4c1a581a43f257ad99ae84281816" category="inline-image-macro">グループ内の個々のデータブローカーで使用可能なアクションメニューのスクリーンショット。</block>
-  <block id="849e308ca762ea472ddd09c38adfbd1d" category="paragraph"><block ref="849e308ca762ea472ddd09c38adfbd1d" category="inline-image-macro-rx" type="image"></block></block>
   <block id="b86abc18838bbcc96f4aba5f9e7400b2" category="list-text">プロンプトに従って、グループにデータブローカーを作成します。</block>
   <block id="301ebdf8067a213d5a55c65fbb488290" category="section-title">セキュリティに関する推奨事項</block>
   <block id="cbf7ac8dbbee47678fd563919556b802" category="paragraph">データブローカーマシンのセキュリティを確保するために、次のことを推奨します。</block>
@@ -110,7 +103,6 @@
   <block id="7bab02d802b38084f68f9bb810f1ca53" category="list-text">の上にカーソルを置きます <block ref="a74720392297d66ac1ab9a90296912c9" category="inline-image-macro-rx" type="image"></block> アイコンをクリックして失敗の理由を確認してください。</block>
   <block id="cb1293ddc33121613d8b44ddf7bddebc" category="list-text">問題を修正します。</block>
   <block id="4c23f2743e95cade04a6991678e7c813" category="paragraph">たとえば、オフラインのデータブローカーを再起動するだけで、初期導入に失敗した場合はデータブローカーの削除が必要になることがあります。</block>
-  <block id="637cba6455e9f6fc12a3c205c16f44fc" category="section-title">データブローカーグループのユニファイド構成を定義する</block>
   <block id="b913043c4767c72e8bbb3ed88c33dd15" category="paragraph">同期プロセス中に同期関係でエラーが発生した場合は、データブローカーグループの同時実行を統合すると、同期エラーの数を減らすことができます。グループの設定を変更すると、転送速度が遅くなるため、パフォーマンスに影響する可能性があります。</block>
   <block id="e0341128a5853714165581951816b70b" category="paragraph">自分で設定を変更することはお勧めしません。設定を変更するタイミングと変更方法については、ネットアップに相談してください。</block>
   <block id="6fea4f8d81c041ddb786f1edf604f6b0" category="list-text">［ * データブローカーの管理 * ］ をクリックします。</block>
@@ -490,7 +482,6 @@
   <block id="858b9413ffbdb9049bf9b696f0ea8392" category="paragraph">Cloud Sync が新しい同期関係の作成を開始します。完了したら、 [ ダッシュボードで表示 ] をクリックして、新しい関係の詳細を表示します。</block>
   <block id="31e5f37358c44c0e0f7f219f24cc5f81" category="summary">Cloud Sync の新機能をご確認ください。</block>
   <block id="e18bd0330d937c2c7c10048bf3ce8366" category="doc">Cloud Sync の新機能</block>
-  <block id="42b5df730d6616520195746bafa566eb" category="section-title">2022 年 3 月 3 日</block>
   <block id="d8247e494d1e03bac9b29cc7ea4c0eca" category="section-title">ダッシュボードでソートします</block>
   <block id="32ee2f2004d5d2f19f46a8909b1df5a6" category="paragraph">ダッシュボードを同期関係名でソートできるようになりました。</block>
   <block id="c964823b8160043978055759ce39dd87" category="inline-image-macro">ダッシュボードで使用できる [ 名前でソート ] オプションを示すスクリーンショット。</block>
@@ -508,8 +499,6 @@
   <block id="005ce66517c857d10ae46724b7a65f99" category="paragraph"><block ref="005ce66517c857d10ae46724b7a65f99" category="inline-image-macro-rx" type="image"></block></block>
   <block id="81a424c5c67f920d35d770215956f31f" category="section-title">PDF レポートをダウンロードできます</block>
   <block id="983eab96e054cfaaef2e1cc070a5ac0d" category="paragraph">レポートの PDF をダウンロードできるようになりました。</block>
-  <block id="30a7332ec8bb1b2ebc76a3d132b0ddff" category="inline-link-macro">レポートについては、こちらをご覧ください</block>
-  <block id="de4dcb6fc7c1b34f094c79b4afa83800" category="paragraph"><block ref="22d4e0c70893ffebbef3d597df59a723" category="inline-link-macro-rx"></block>。</block>
   <block id="be5d8939c40c8e2f992c86c6df281553" category="section-title">2022 年 1 月 2 日</block>
   <block id="639448a9d08cad0082353310edaa5321" category="section-title">新しい Box 同期関係</block>
   <block id="27225cf5b84e571fe2412826220eb977" category="paragraph">2 つの新しい同期関係がサポートされています。</block>
@@ -1181,7 +1170,6 @@
   <block id="52e561223aa4d60195ec48c81021c098" category="paragraph">同期関係のソースが SnapMirror デスティネーション（読み取り専用）の場合、「読み取り / リスト」権限でソースからターゲットにデータを同期できます。</block>
   <block id="096c99dcba4f443f3faf0add6cd69220" category="section-title">NFS サーバの要件</block>
   <block id="5cc2d35f0ee4edef8750c640e1b018c1" category="list-text">NFS サーバには、 NetApp システムまたは NetApp 以外のシステムを使用できます。</block>
-  <block id="3a29221f42b8cb307e588a8ca61bbec2" category="list-text">ファイルサーバが、データブローカーホストによるエクスポートへのアクセスを許可している必要があります。</block>
   <block id="e07694fd13f56a99d495063f6ca17334" category="list-text">NFS バージョン 3 、 4.0 、 4.1 、 4.2 がサポートされています。</block>
   <block id="dadb092f6add17b9a5eb4af5c4505c14" category="paragraph">サーバで目的のバージョンが有効になっている必要があります。</block>
   <block id="036a01e342cbcc1e478008b78551a134" category="list-text">ONTAP システムから NFS データを同期する場合は、 SVM の NFS エクスポートリストへのアクセスが有効になっていることを確認します（ vserver nfs modify -vserver _svm_name _showmount enabled ）。</block>
@@ -1382,4 +1370,55 @@
   <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">ネットアップコミュニティ</block>
   <block id="ff6c37cbc252e306a6b4e390ec13cbc1" category="sidebar">Cloud Central のブログです</block>
   <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">クラウドに関する Web セミナー</block>
+  <block id="ca08c96498d9894503ce9e420ef6d436" category="section-title">データブローカーグループの仕組み</block>
+  <block id="247ec76f61baa3930d7923ec714c899c" category="paragraph">データブローカーグループには、 1 つ以上のデータブローカーを含めることができます。データブローカーをグループ化すると、同期関係のパフォーマンスを向上させることができます。</block>
+  <block id="c73532751f2f234c7f0d9ca93cb4b15b" category="section-title">グループ内のデータブローカーの数</block>
+  <block id="e0efdad08a998dee7544ebf8d6b3b89e" category="section-title">新しいデータブローカーをグループに追加</block>
+  <block id="8fece025a1a8fef7018449bf104a2527" category="list-title">始める前に</block>
+  <block id="2de4e7eeead88f538b8cd1733c76e3a6" category="paragraph"><block ref="2de4e7eeead88f538b8cd1733c76e3a6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="895f6ee3fb48280aa9fdce9f1c30aa6d" category="section-title">ユニファイド構成をセットアップする</block>
+  <block id="811611d56e45c2c5ad32ef90181ce8a8" category="section-title">データブローカーをグループ間で移動</block>
+  <block id="ce906694cadabac093e4c5fe069bcb4c" category="paragraph">ターゲットのデータブローカーグループのパフォーマンスを高速化する必要がある場合は、データブローカーをあるグループから別のグループに移動します。</block>
+  <block id="cc3da3df5b4ab9b2be7d5806e4025606" category="paragraph">たとえば、データブローカーで同期関係が管理されなくなった場合、同期関係を管理している別のグループに簡単に移動できます。</block>
+  <block id="41b2fa65bd2051073cfc172ed6d944a7" category="list-text">データブローカーグループが同期関係を管理していて、グループにデータブローカーが 1 つしかない場合、そのデータブローカーを別のグループに移動することはできません。</block>
+  <block id="3e0e9fccf9e35eb1a06e1c36bf885a2f" category="list-text">暗号化された同期関係を管理するグループとの間でデータブローカーを移動することはできません。</block>
+  <block id="db90b652da494a61a1c01e5e5aef4315" category="list-text">現在導入中のデータブローカーは移動できません。</block>
+  <block id="dda0c1f183c1fccf92fffcd171b23e21" category="list-text">データブローカーのアクションメニューをクリックし、 * データブローカーの移動 * を選択します。</block>
+  <block id="89c00533408de9d6ad1e44640394b315" category="paragraph"><block ref="89c00533408de9d6ad1e44640394b315" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="cfd516ad37b4df608c16efb09914e1fc" category="list-text">新しいデータブローカーグループを作成するか、既存のデータブローカーグループを選択してください。</block>
+  <block id="55d7c27d3127f4494c358b638f4fc6ff" category="list-text">[ 移動（ Move ） ] をクリックします。</block>
+  <block id="2daf9e8be8307f8316675b55ccbe21d9" category="paragraph">Cloud Sync は、データブローカーを新規または既存のデータブローカーグループに移動します。前のグループに他のデータブローカーが存在しない場合、 Cloud Sync はそのデータブローカーを削除します。</block>
+  <block id="dbe6fde8cda66c70d52ac330a93b530e" category="section-title">プロキシ設定を更新します</block>
+  <block id="f646f203e1dead2c4f220dc5943aa058" category="paragraph">データブローカーのプロキシ設定を更新するには、新しいプロキシ設定に関する詳細を追加するか、既存のプロキシ設定を編集します。</block>
+  <block id="550a2db189a4eb50771eeb91357d19cd" category="list-text">データブローカーのアクションメニューをクリックし、 * プロキシ構成の編集 * を選択します。</block>
+  <block id="85a4803f127edd3390d65e41d8aaad98" category="list-text">プロキシに関する詳細を指定します。ホスト名、ポート番号、ユーザ名、パスワードです。</block>
+  <block id="04252e4e5460971d7f33943bd841f366" category="list-text">[ 更新（ Update ） ] をクリックします。</block>
+  <block id="dc7ca5465298da0988fdbdf96a6140c1" category="paragraph">Cloud Sync は、インターネットアクセスにプロキシ設定を使用するようにデータブローカーを更新します。</block>
+  <block id="2bbd7c4d9d525b0e8675bf3663179545" category="section-title">データブローカーグループを削除</block>
+  <block id="5b0d2474104e897ec00992476cc0328c" category="paragraph">同期関係がデータブローカーグループで管理されなくなった場合は、グループを削除することで、すべてのデータブローカーを Cloud Sync から削除できます。</block>
+  <block id="ebdb7bb51a167f7be93fdd2b43189d84" category="paragraph">Cloud Sync によって削除されるデータブローカーは、 Cloud Sync のレコードからのみ削除されます。クラウドプロバイダからデータブローカーインスタンスを手動で削除し、追加のクラウドリソースを削除する必要があります。</block>
+  <block id="4caa7a774039d94c9779b6e68946536b" category="list-text">アクションメニューをクリックし、 * グループの削除 * を選択します。</block>
+  <block id="a6f5a3bf619c49f582460d312e4f123a" category="list-text">確認するには、グループの名前を入力し、 * グループの削除 * をクリックします。</block>
+  <block id="33c715478bea68511b75dc844219e343" category="paragraph">Cloud Sync によってデータブローカーが削除され、グループが削除されます。</block>
+  <block id="5de04ab2445218da916465ab33983c22" category="section-title">2022 年 4 月 3 日</block>
+  <block id="33c34b75ae4154295ed3cdeeccb3fd6a" category="section-title">データブローカーグループの機能拡張</block>
+  <block id="9e85c5ace2120c3600ae07824bd6d1a9" category="paragraph">データブローカーグループには、次のような機能拡張が行われました。</block>
+  <block id="d1dcf627a81e370076956675cf99d2b9" category="list-text">データブローカーを新規または既存のグループに移動できるようになりました。</block>
+  <block id="1a89df8c409f135e6e7efd8c0600dba6" category="list-text">データブローカーのプロキシ設定を更新できるようになりました。</block>
+  <block id="71dba184b83141e962cb89e88563baf3" category="list-text">最後に、データブローカーグループを削除することもできます。</block>
+  <block id="fe914f8d9b65e6214843cbd5f42cddc8" category="inline-link">データブローカーグループの管理方法について説明します</block>
+  <block id="d7d0bf852f1595f61d55c11980f7910f" category="paragraph"><block ref="0c28ef170c985c7b9baf79aa516f5e52" category="inline-link-rx"></block>。</block>
+  <block id="c81f80b5e3a2c8dfe8c2f908cbbfc2fa" category="list-text">Sync Dashboard の内容をフィルタリングして、特定のステータスに一致する同期関係を簡単に見つけることができるようになりました。たとえば、ステータスが「失敗」の同期関係をフィルタリングできます</block>
+  <block id="ab31e38babe6f59fc89d1a7f8d3ea2c9" category="inline-image-macro">ダッシュボードの上部にある ［ 同期によるフィルタ ］ ステータスオプションを示すスクリーンショット。</block>
+  <block id="b5f5f707aed7c770f3699444b445aaa3" category="paragraph"><block ref="b5f5f707aed7c770f3699444b445aaa3" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="acc0c89d65623eb8cc3f21faae13aa5c" category="section-title">2022 年 3 月 3 日</block>
+  <block id="b8573b8d6cb0195fa946927c3aa36397" category="inline-link">レポートの詳細については、こちらをご覧ください</block>
+  <block id="913d3279d6ca39c6bd290fac85314961" category="paragraph"><block ref="9ba5aa88e2b271505b32ed12efb1883e" category="inline-link-rx"></block>。</block>
+  <block id="a274f268e46a9fcc5130af66046ef57b" category="list-text">ファイルサーバは、データブローカーホストが必要なポート経由でエクスポートにアクセスできるようにする必要があります。</block>
+  <block id="9ea2f732b81b5cda8d4d5edea63e6877" category="list-text">111 TCP/UDP</block>
+  <block id="1b1cd21da8907e21f7b884f90e6cbed4" category="list-text">2049 TCP/UDP</block>
+  <block id="a67c199c0fc4d687a53739e1d60b9add" category="list-text">5555 TCP/UDP</block>
+  <block id="fb25385dee5b2553b1a83a1854995508" category="list-text">139 TCP</block>
+  <block id="40f52eda7c4d926e57d399fdaa36e568" category="list-text">445 TCP</block>
+  <block id="e52eaa6f5efc038192dc18339c053ab3" category="list-text">137-138 UDP</block>
 </blocks>

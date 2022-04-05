@@ -17,6 +17,29 @@ Cloud Sync の新機能をご確認ください。
 
 
 
+== 2022 年 4 月 3 日
+
+
+
+=== データブローカーグループの機能拡張
+
+データブローカーグループには、次のような機能拡張が行われました。
+
+* データブローカーを新規または既存のグループに移動できるようになりました。
+* データブローカーのプロキシ設定を更新できるようになりました。
+* 最後に、データブローカーグループを削除することもできます。
+
+
+https://docs.netapp.com/us-en/cloud-manager-sync/task_sync_managing_data_brokers.html["データブローカーグループの管理方法について説明します"]。
+
+* Sync Dashboard の内容をフィルタリングして、特定のステータスに一致する同期関係を簡単に見つけることができるようになりました。たとえば、ステータスが「失敗」の同期関係をフィルタリングできます
++
+image:screenshot-sync-filter.png["ダッシュボードの上部にある ［ 同期によるフィルタ ］ ステータスオプションを示すスクリーンショット。"]
+
+
+
+
+
 == 2022 年 3 月 3 日
 
 
@@ -59,7 +82,7 @@ image:screenshot-sync-group-relationships.png["データブローカーグルー
 
 レポートの PDF をダウンロードできるようになりました。
 
-link:task-managing-reports.html["レポートについては、こちらをご覧ください"]。
+https://docs.netapp.com/us-en/cloud-manager-sync/task-managing-reports.html["レポートの詳細については、こちらをご覧ください"]。
 
 
 
