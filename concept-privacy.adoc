@@ -6,6 +6,7 @@ summary: ネットアップには、 Cloud Sync サービスの使用中に指�
 ---
 = データのプライバシー
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

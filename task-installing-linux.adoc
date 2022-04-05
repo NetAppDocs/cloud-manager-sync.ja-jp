@@ -6,6 +6,7 @@ summary: 新しいデータブローカーを作成する場合は、オンプ�
 ---
 = Linux ホストへのデータブローカーのインストール
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

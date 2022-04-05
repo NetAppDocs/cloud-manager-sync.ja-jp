@@ -6,6 +6,7 @@ summary: 同期関係を作成すると、 Cloud Sync サービスはソース�
 ---
 = 同期関係を作成する
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

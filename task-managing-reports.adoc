@@ -7,6 +7,7 @@ summary: レポートを作成して表示すると、 NetApp の担当者がデ
 = レポートを作成および表示して、設定を調整します
 :toc: macro
 :hardbreaks:
+:allow-uri-read: 
 :toc: 
 :nofooter: 
 :icons: font

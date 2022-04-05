@@ -6,6 +6,7 @@ summary: 必要に応じて、アンインストールスクリプトを実行�
 ---
 = データブローカーのアンインストール
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

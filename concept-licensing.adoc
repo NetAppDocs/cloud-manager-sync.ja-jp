@@ -6,6 +6,7 @@ summary: 14 日間の無料トライアル終了後に、同期関係の料金�
 ---
 = ライセンスの概要
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: ネットアップのクラウド同期サービスは、データを�
 ---
 = Cloud Sync の概要
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

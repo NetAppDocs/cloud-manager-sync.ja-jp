@@ -7,6 +7,7 @@ summary: データの即時同期やスケジュールの変更などにより�
 = 同期関係の管理
 :toc: macro
 :hardbreaks:
+:allow-uri-read: 
 :toc: 
 :nofooter: 
 :icons: font

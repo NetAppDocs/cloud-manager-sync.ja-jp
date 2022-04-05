@@ -7,6 +7,7 @@ summary: データブローカーは、ソースの場所からターゲット�
 = データブローカーグループの管理
 :toc: macro
 :hardbreaks:
+:allow-uri-read: 
 :toc: 
 :nofooter: 
 :icons: font

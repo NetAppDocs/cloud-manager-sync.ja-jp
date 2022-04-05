@@ -6,6 +6,7 @@ summary: Amazon S3 、 Azure 、または Google Cloud のクレデンシャル�
 ---
 = 外部の橋本社ボールトを使用するようにデータブローカーグループを設定する
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

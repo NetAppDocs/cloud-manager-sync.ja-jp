@@ -6,6 +6,7 @@ summary: 新しいデータブローカーを作成する場合、 Azure のデ�
 ---
 = Azure に新しいデータブローカーを作成
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

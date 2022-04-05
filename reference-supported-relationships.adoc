@@ -6,6 +6,7 @@ summary: Cloud Sync を使用すると、ソースからターゲットへデー
 ---
 = サポートされている同期関係
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
