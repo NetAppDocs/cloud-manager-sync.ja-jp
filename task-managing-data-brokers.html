@@ -45,31 +45,61 @@
   <link rel="stylesheet" href='/ja-jp/cloud-manager-sync/css/na-utility.css' type='text/css'>
   <link rel="stylesheet" href='/ja-jp/cloud-manager-sync/css/na-sidebar.css' type='text/css'>
   <link rel='stylesheet' href='/ja-jp/cloud-manager-sync/css/clouddocs.css' type='text/css'>
+  <link rel='stylesheet' href='/ja-jp/cloud-manager-sync/css/custom-dropdown.css' type='text/css'>
   <link rel='stylesheet' href='/ja-jp/cloud-manager-sync/css/na-pagenav.css' type='text/css'>
 
   
   <link rel="stylesheet" href="/ja-jp/cloud-manager-sync/css/landing-page.css" type="text/css">
   <link rel="stylesheet" href="/ja-jp/cloud-manager-sync/css/tabbed-blocks.css" type="text/css">
-  <link rel='stylesheet' href='/ja-jp/cloud-manager-sync/css/na-feature.css' type='text/css'><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <!-- Canonical url -->
+  <link rel='stylesheet' href='/ja-jp/cloud-manager-sync/css/na-feature.css' type='text/css'><!-- Top level site integrations --><script>
+    if (document.location.hostname === "docs.netapp.com") {
+      var head = document.getElementsByTagName('head')[0];
+      var onetrustConsent = document.createElement("script");
+      onetrustConsent.type = "text/javascript";
+      onetrustConsent.src = "https://cdn.cookielaw.org/consent/72570c5c-fe30-465f-b0e0-b77f7fb4ae34/OtAutoBlock.js";
+      head.appendChild(onetrustConsent);
+
+      var onetrustScript = document.createElement("script");
+      onetrustScript.type = "text/javascript";
+      onetrustScript.src = "https://cdn.cookielaw.org/scripttemplates/otSDKStub.js";
+      onetrustScript.charset = "UTF-8";
+      onetrustScript.dataset.documentLanguage = "true";
+      onetrustScript.dataset.domainScript = "72570c5c-fe30-465f-b0e0-b77f7fb4ae34";
+      head.appendChild(onetrustScript);
+    }
+
+    function OptanonWrapper() { }
+
+    if (document.location.hostname === "docs.netapp.com") {
+      var adobe = document.createElement("script");
+      adobe.type = "text/plain";
+      adobe.className = "optanon-category-C0002";
+      adobe.src = "//assets.adobedtm.com/60287eadf1ee/c284da483c83/launch-e9ff3acac59f.min.js";
+      head.appendChild(adobe);
+
+      var google = document.createElement("script");
+      google.type = "text/plain";
+      google.className = "optanon-category-C0002";
+      google.src = "https://www.googletagmanager.com/gtag/js?id=UA-81697994-3";
+      head.appendChild(google);
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-81697994-3');
+    }
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 
-  <!-- Used for Product Family Page Sidebar Visibility --><link rel="stylesheet" href='/ja-jp/cloud-manager-sync/css/product-family.css' type="text/css">
-  <script src='/ja-jp/cloud-manager-sync/js/product-family.js'></script><!-- Used to import Promise for IE. Required for SearchKit -->
+  <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/ja-jp/cloud-manager-sync/js/na-search.js'></script><script src='/ja-jp/cloud-manager-sync/js/na-pagenav.js'></script><link rel='stylesheet' href='/ja-jp/cloud-manager-sync/css/prism.css' type='text/css'>
   <link rel='stylesheet' href='/ja-jp/cloud-manager-sync/css/prism-netapp.css' type='text/css'>
 
 
   <script src='/ja-jp/cloud-manager-sync/js/na-utility.js'></script>
   <script src='/ja-jp/cloud-manager-sync/js/clouddocs.js'></script>
-  <script>
-  if (document.location.hostname === "docs.netapp.com") {
-    var head = document.getElementsByTagName('head')[0];
-    var adobe = document.createElement("script");
-    adobe.type = "text/javascript";
-    adobe.src = "//assets.adobedtm.com/60287eadf1ee/c284da483c83/launch-e9ff3acac59f.min.js";
-    head.appendChild(adobe);
-  }
-  </script>
   <script src='/ja-jp/cloud-manager-sync/js/jquery.navgoco.min.js'></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script src='/ja-jp/cloud-manager-sync/js/toc.js'></script>
@@ -122,16 +152,8 @@
               $("#tg-sb-icon").toggleClass('fa-toggle-off');
           });
       });
-  </script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-81697994-3"></script>
-  <script>
-  if (document.location.hostname === "docs.netapp.com") {
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-81697994-3');
-  }
   </script>
-  <script src='/ja-jp/cloud-manager-sync/js/version-dropdown.js'></script>
+  <script src='/ja-jp/cloud-manager-sync/js/custom-dropdown.js'></script>
   <script src='/ja-jp/cloud-manager-sync/js/FileSaver.min.js'></script>
   <script src='/ja-jp/cloud-manager-sync/js/jszip-utils.min.js'></script>
   <script src='/ja-jp/cloud-manager-sync/js/jszip.min.js'></script>
@@ -139,20 +161,15 @@
 </head>
 
 
-  <body class role="document">
+  <body class role="document" data-flavor="">
     <div id="page" class="n-off-canvas-menu">
       <div class="n-off-canvas-menu__menu"><!--TODO: Add offcanvas code --></div>
       <div class="n-off-canvas-menu__content-wrap">
         <header class="site-header" id="banner">
   
   <!-- Start Page Toolbar -->
-  <div class="page-nav-toolbar">
-    <div id="version-dropdown"></div>
-    <div class="page-nav-contribute"  >
-      <a target="_blank" href="https://github.com/NetAppDocs/cloud-manager-sync/issues/new?body=Page%3A%20[データブローカーグループの管理](https://docs.netapp.com/ja-jp/cloud-manager-sync/task-managing-data-brokers.html)" class="page-nav-contribute-link" role="button"><img src="/ja-jp/cloud-manager-sync/images/discuss-sm.svg" class="github-icon" />ドキュメントの変更をリクエスト</a>
-      <a target="_blank" href="https://github.com/NetAppDocs/cloud-manager-sync/blob/main/task-managing-data-brokers.adoc" class="page-nav-contribute-link" role="button"><img src="/ja-jp/cloud-manager-sync/images/edit-sm.svg" class="github-icon" />GitHub で編集</a>
-      <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/ja-jp/cloud-manager-sync/images/article-sm.svg" class="github-icon" />寄稿者向けガイド</a>
-    </div>
+  
+  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/cloud-manager-sync/issues/new?body=Page%3A%20[データブローカーグループの管理](https://docs.netapp.com/ja-jp/cloud-manager-sync/task-managing-data-brokers.html)" class="page-nav-contribute-link" role="button"><img src="/ja-jp/cloud-manager-sync/images/discuss-sm.svg" class="github-icon" />ドキュメントの変更をリクエスト</a><a target="_blank" href="https://github.com/NetAppDocs/cloud-manager-sync/blob/main/task-managing-data-brokers.adoc" class="page-nav-contribute-link" role="button"><img src="/ja-jp/cloud-manager-sync/images/edit-sm.svg" class="github-icon" />GitHub で編集</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/ja-jp/cloud-manager-sync/images/article-sm.svg" class="github-icon" />寄稿者向けガイド</a></div>
     <div class="page-nav-container">
       <nav class="page-nav-fixed">
         <div class="page-nav-title">このページ</div>
@@ -162,6 +179,7 @@
       </nav>
     </div>
   </div>
+  
   
   <!-- Start top_hat -->
   <div class="n-top-hat">
@@ -245,7 +263,8 @@
           data-did-you-mean="{suggestion} を検索" 
           data-no-results-found-did-you-mean="{query} に該当する結果はありません。{suggestion} の間違いではありませんか?" 
           data-results-found="{hitCount} 件見つかりました"  
-          data-sk-es-pf-indexes=""></div>
+          data-sk-es-pf-indexes=""
+          data-flavor=""></div>
           <button class="n-property-bar__search-toggle-button" type="button">
             <svg class="n-icon-search n-property-bar__search-toggle-button-icon" aria-labelledby="title">
               <title>search</title>
@@ -334,6 +353,9 @@
 </div>
 <div class="n-pdf-body-container">
   <ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><li class="pdf-ux-container">
+        
+        
+        
         <a target="_blank" href="/ja-jp/cloud-manager-sync/pdfs/fullsite-sidebar/Cloud_Sync_のドキュメント.pdf" >
           <img src="/ja-jp/cloud-manager-sync/images/pdf.png" width="16" height="16"/>このドキュメントサイトのPDF</a>
 
@@ -344,6 +366,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ja-jp/cloud-manager-sync/pdfs/sidebar/リリースノート.pdf" 
@@ -370,6 +395,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ja-jp/cloud-manager-sync/pdfs/sidebar/はじめに.pdf" 
@@ -393,6 +421,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ja-jp/cloud-manager-sync/pdfs/sidebar/データブローカーをインストール.pdf" 
@@ -432,6 +463,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ja-jp/cloud-manager-sync/pdfs/sidebar/Cloud_Sync_を使用します.pdf" 
@@ -445,6 +479,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ja-jp/cloud-manager-sync/pdfs/sidebar/ソースとターゲットの間でデータを同期します.pdf" 
@@ -505,6 +542,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ja-jp/cloud-manager-sync/pdfs/sidebar/概念.pdf" 
@@ -533,6 +573,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ja-jp/cloud-manager-sync/pdfs/sidebar/知識とサポート.pdf" 
@@ -662,7 +705,7 @@
         ライセンス
       </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/cloud-manager-sync/concept-privacy.html">
         データのプライバシー
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/cloud-manager-sync/faq-sync.html">
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/cloud-manager-sync/faq.html">
         よく寄せられる質問
       </a></li></ul></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> 知識とサポート</div>
@@ -684,6 +727,7 @@
 </script>
 <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
 <script>$("li.active").parents('li').toggleClass("active");</script>
+
 
   </div>
   
@@ -737,7 +781,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-01 19:10:22 +0000">04/01/2022</time>
+    <time datetime="2022-04-05 02:35:43 +0000">04/05/2022</time>
     
   
 
@@ -747,20 +791,22 @@
 <div id="toc" class="toc">
 <div id="toctitle">目次</div>
 <ul class="sectlevel1">
-<li><a href="#データブローカーグループ">データブローカーグループ</a>
+<li><a href="#データブローカーグループの仕組み">データブローカーグループの仕組み</a>
 <ul class="sectlevel2">
-<li><a href="#グループ内のデータブローカーの数を確認">グループ内のデータブローカーの数を確認</a></li>
 <li><a href="#グループは複数の関係を管理できます">グループは複数の関係を管理できます</a></li>
-<li><a href="#新しいデータブローカーのみ">新しいデータブローカーのみ</a></li>
+<li><a href="#グループ内のデータブローカーの数">グループ内のデータブローカーの数</a></li>
 </ul>
 </li>
-<li><a href="#新しいデータブローカーを追加">新しいデータブローカーを追加</a></li>
 <li><a href="#セキュリティに関する推奨事項">セキュリティに関する推奨事項</a></li>
-<li><a href="#データブローカーの構成を表示します">データブローカーの構成を表示します</a></li>
-<li><a href="#データブローカーをグループから削除">データブローカーをグループから削除</a></li>
+<li><a href="#新しいデータブローカーをグループに追加">新しいデータブローカーをグループに追加</a></li>
 <li><a href="#グループの名前を編集します">グループの名前を編集します</a></li>
+<li><a href="#ユニファイド構成をセットアップする">ユニファイド構成をセットアップする</a></li>
+<li><a href="#データブローカーをグループ間で移動">データブローカーをグループ間で移動</a></li>
+<li><a href="#プロキシ設定を更新します">プロキシ設定を更新します</a></li>
+<li><a href="#データブローカーの構成を表示します">データブローカーの構成を表示します</a></li>
 <li><a href="#データブローカーの問題に対処">データブローカーの問題に対処</a></li>
-<li><a href="#データブローカーグループのユニファイド構成を定義する">データブローカーグループのユニファイド構成を定義する</a></li>
+<li><a href="#データブローカーをグループから削除">データブローカーをグループから削除</a></li>
+<li><a href="#データブローカーグループを削除">データブローカーグループを削除</a></li>
 </ul>
 </div>
 <div id="preamble">
@@ -771,16 +817,10 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="データブローカーグループ">データブローカーグループ</h2>
+<h2 id="データブローカーグループの仕組み">データブローカーグループの仕組み</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>データブローカーをグループ化すると、同期関係のパフォーマンスを向上させることができます。</p>
-</div>
-<div class="sect2">
-<h3 id="グループ内のデータブローカーの数を確認">グループ内のデータブローカーの数を確認</h3>
-<div class="paragraph">
-<p>多くの場合、 1 つのデータブローカーで同期関係のパフォーマンス要件を満たすことができます。そうでない場合は、データブローカーをグループに追加することで、同期パフォーマンスを高速化できます。ただし、まず、同期のパフォーマンスに影響を与える可能性のある他の要因を確認する必要があります。 <a href="faq.html#how-many-data-brokers-are-required-in-a-group">"複数のデータブローカーがいつ行われるかを確認する方法については、こちらをご覧ください は必須です"</a>。</p>
-</div>
+<p>データブローカーグループには、 1 つ以上のデータブローカーを含めることができます。データブローカーをグループ化すると、同期関係のパフォーマンスを向上させることができます。</p>
 </div>
 <div class="sect2">
 <h3 id="グループは複数の関係を管理できます">グループは複数の関係を管理できます</h3>
@@ -808,15 +848,42 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="新しいデータブローカーのみ">新しいデータブローカーのみ</h3>
+<h3 id="グループ内のデータブローカーの数">グループ内のデータブローカーの数</h3>
 <div class="paragraph">
-<p>新しいデータブローカーはグループにのみ追加できます。既存のデータブローカーをグループに追加することはできません。</p>
+<p>多くの場合、 1 つのデータブローカーで同期関係のパフォーマンス要件を満たすことができます。そうでない場合は、データブローカーをグループに追加することで、同期パフォーマンスを高速化できます。ただし、まず、同期のパフォーマンスに影響を与える可能性のある他の要因を確認する必要があります。 <a href="faq.html#how-many-data-brokers-are-required-in-a-group">"複数のデータブローカーがいつ行われるかを確認する方法については、こちらをご覧ください は必須です"</a>。</p>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="新しいデータブローカーを追加">新しいデータブローカーを追加</h2>
+<h2 id="セキュリティに関する推奨事項">セキュリティに関する推奨事項</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>データブローカーマシンのセキュリティを確保するために、次のことを推奨します。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>SSH で X11 転送を許可しないでください</p>
+</li>
+<li>
+<p>SSH では、 TCP 接続の転送を許可しないでください</p>
+</li>
+<li>
+<p>SSH ではトンネルを許可しないでください</p>
+</li>
+<li>
+<p>SSH では、クライアント環境変数を受け入れないでください</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>これらのセキュリティ推奨事項は、データブローカーマシンへの不正な接続を防止するのに役立ちます。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="新しいデータブローカーをグループに追加">新しいデータブローカーをグループに追加</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>新しいデータブローカーを作成するには、いくつかの方法があります。</p>
@@ -838,7 +905,7 @@
 </ul>
 </div>
 <div class="ulist">
-<div class="title">知っておくべきこと</div>
+<div class="title">始める前に</div>
 <ul>
 <li>
 <p>暗号化された同期関係を管理するグループにデータブローカーを追加することはできません。</p>
@@ -893,7 +960,7 @@
 <li>
 <p>アクションメニューをクリックし、 * データブローカーの追加 * を選択します。</p>
 <div class="paragraph">
-<p><span class="image"><img src="./media/screenshot_sync_group_add.gif" alt="グループ内の個々のデータブローカーで使用可能なアクションメニューのスクリーンショット。"></span></p>
+<p><span class="image"><img src="./media/screenshot_sync_group_add.png" alt="グループ内の個々のデータブローカーで使用可能なアクションメニューのスクリーンショット。"></span></p>
 </div>
 </li>
 <li>
@@ -923,29 +990,162 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="セキュリティに関する推奨事項">セキュリティに関する推奨事項</h2>
+<h2 id="グループの名前を編集します">グループの名前を編集します</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>データブローカーマシンのセキュリティを確保するために、次のことを推奨します。</p>
+<p>データブローカーグループの名前は、いつでも変更できます。</p>
+</div>
+<div class="olist arabic">
+<div class="title">手順</div>
+<ol class="arabic">
+<li>
+<p>［ * 同期 ］ &gt; ［ データブローカーの管理 * ］ をクリックします。</p>
+</li>
+<li>
+<p>アクションメニューをクリックし、 * グループ名の編集 * を選択します。</p>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_sync_group_edit.gif" alt="グループ内の個々のデータブローカーで使用可能なアクションメニューのスクリーンショット。"></span></p>
+</div>
+</li>
+<li>
+<p>新しい名前を入力し、 * 保存 * をクリックします。</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Cloud Sync によってデータブローカーグループの名前が更新されます。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="ユニファイド構成をセットアップする">ユニファイド構成をセットアップする</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>同期プロセス中に同期関係でエラーが発生した場合は、データブローカーグループの同時実行を統合すると、同期エラーの数を減らすことができます。グループの設定を変更すると、転送速度が遅くなるため、パフォーマンスに影響する可能性があります。</p>
+</div>
+<div class="paragraph">
+<p>自分で設定を変更することはお勧めしません。設定を変更するタイミングと変更方法については、ネットアップに相談してください。</p>
+</div>
+<div class="olist arabic">
+<div class="title">手順</div>
+<ol class="arabic">
+<li>
+<p>［ * データブローカーの管理 * ］ をクリックします。</p>
+</li>
+<li>
+<p>データブローカーグループの [ 設定 ] アイコンをクリックします。</p>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_sync_group_settings.png" alt="データブローカーグループの設定アイコンを示すスクリーンショット。"></span></p>
+</div>
+</li>
+<li>
+<p>必要に応じて設定を変更し、 * Unify Configuration* をクリックします。</p>
+<div class="paragraph">
+<p>次の点に注意してください。</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>SSH で X11 転送を許可しないでください</p>
+<p>変更する設定を選択できます。 4 つすべてを一度に変更する必要はありません。</p>
 </li>
 <li>
-<p>SSH では、 TCP 接続の転送を許可しないでください</p>
+<p>新しい構成がデータブローカーに送信されると、データブローカーは自動的に再起動し、新しい構成を使用します。</p>
 </li>
 <li>
-<p>SSH ではトンネルを許可しないでください</p>
+<p>変更が反映されて Cloud Sync インターフェイスに表示されるまで、 1 分程度かかる場合があります。</p>
 </li>
 <li>
-<p>SSH では、クライアント環境変数を受け入れないでください</p>
+<p>データブローカーが実行されていないと、 Cloud Sync がデータブローカーと通信できないため、設定が変更されません。データブローカーが再起動すると設定が変更されます。</p>
+</li>
+<li>
+<p>ユニファイド構成を設定すると、新しいデータブローカーでは自動的に新しい構成が使用されます。</p>
 </li>
 </ul>
 </div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="データブローカーをグループ間で移動">データブローカーをグループ間で移動</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>これらのセキュリティ推奨事項は、データブローカーマシンへの不正な接続を防止するのに役立ちます。</p>
+<p>ターゲットのデータブローカーグループのパフォーマンスを高速化する必要がある場合は、データブローカーをあるグループから別のグループに移動します。</p>
+</div>
+<div class="paragraph">
+<p>たとえば、データブローカーで同期関係が管理されなくなった場合、同期関係を管理している別のグループに簡単に移動できます。</p>
+</div>
+<div class="ulist">
+<div class="title">制限</div>
+<ul>
+<li>
+<p>データブローカーグループが同期関係を管理していて、グループにデータブローカーが 1 つしかない場合、そのデータブローカーを別のグループに移動することはできません。</p>
+</li>
+<li>
+<p>暗号化された同期関係を管理するグループとの間でデータブローカーを移動することはできません。</p>
+</li>
+<li>
+<p>現在導入中のデータブローカーは移動できません。</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">手順</div>
+<ol class="arabic">
+<li>
+<p>［ * 同期 ］ &gt; ［ データブローカーの管理 * ］ をクリックします。</p>
+</li>
+<li>
+<p>をクリックします <span class="image"><img src="./media/screenshot_sync_group_expand.gif" alt="グループ内のデータブローカーのリストを展開できるボタンのスクリーンショット。"></span> をクリックして、グループ内のデータブローカーのリストを展開します。</p>
+</li>
+<li>
+<p>データブローカーのアクションメニューをクリックし、 * データブローカーの移動 * を選択します。</p>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_sync_group_remove.png" alt="個々のデータブローカーグループごとに使用可能なアクションメニューのスクリーンショット。"></span></p>
+</div>
+</li>
+<li>
+<p>新しいデータブローカーグループを作成するか、既存のデータブローカーグループを選択してください。</p>
+</li>
+<li>
+<p>[ 移動（ Move ） ] をクリックします。</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Cloud Sync は、データブローカーを新規または既存のデータブローカーグループに移動します。前のグループに他のデータブローカーが存在しない場合、 Cloud Sync はそのデータブローカーを削除します。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="プロキシ設定を更新します">プロキシ設定を更新します</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>データブローカーのプロキシ設定を更新するには、新しいプロキシ設定に関する詳細を追加するか、既存のプロキシ設定を編集します。</p>
+</div>
+<div class="olist arabic">
+<div class="title">手順</div>
+<ol class="arabic">
+<li>
+<p>［ * 同期 ］ &gt; ［ データブローカーの管理 * ］ をクリックします。</p>
+</li>
+<li>
+<p>をクリックします <span class="image"><img src="./media/screenshot_sync_group_expand.gif" alt="グループ内のデータブローカーのリストを展開できるボタンのスクリーンショット。"></span> をクリックして、グループ内のデータブローカーのリストを展開します。</p>
+</li>
+<li>
+<p>データブローカーのアクションメニューをクリックし、 * プロキシ構成の編集 * を選択します。</p>
+</li>
+<li>
+<p>プロキシに関する詳細を指定します。ホスト名、ポート番号、ユーザ名、パスワードです。</p>
+</li>
+<li>
+<p>[ 更新（ Update ） ] をクリックします。</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Cloud Sync は、インターネットアクセスにプロキシ設定を使用するようにデータブローカーを更新します。</p>
 </div>
 </div>
 </div>
@@ -1009,6 +1209,34 @@
 </div>
 </div>
 <div class="sect1">
+<h2 id="データブローカーの問題に対処">データブローカーの問題に対処</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Cloud Sync では、問題のトラブルシューティングに役立つ各データブローカーのステータスが表示されます。</p>
+</div>
+<div class="olist arabic">
+<div class="title">手順</div>
+<ol class="arabic">
+<li>
+<p>ステータスが「 Unknown 」または「 Failed 」のデータブローカーを特定します。</p>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_sync_broker_status.gif" alt=""></span></p>
+</div>
+</li>
+<li>
+<p>の上にカーソルを置きます <span class="image"><img src="./media/screenshot_sync_status_icon.gif" alt=""></span> アイコンをクリックして失敗の理由を確認してください。</p>
+</li>
+<li>
+<p>問題を修正します。</p>
+<div class="paragraph">
+<p>たとえば、オフラインのデータブローカーを再起動するだけで、初期導入に失敗した場合はデータブローカーの削除が必要になることがあります。</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="データブローカーをグループから削除">データブローカーをグループから削除</h2>
 <div class="sectionbody">
 <div class="paragraph">
@@ -1051,10 +1279,13 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="グループの名前を編集します">グループの名前を編集します</h2>
+<h2 id="データブローカーグループを削除">データブローカーグループを削除</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>データブローカーグループの名前は、いつでも変更できます。</p>
+<p>同期関係がデータブローカーグループで管理されなくなった場合は、グループを削除することで、すべてのデータブローカーを Cloud Sync から削除できます。</p>
+</div>
+<div class="paragraph">
+<p>Cloud Sync によって削除されるデータブローカーは、 Cloud Sync のレコードからのみ削除されます。クラウドプロバイダからデータブローカーインスタンスを手動で削除し、追加のクラウドリソースを削除する必要があります。</p>
 </div>
 <div class="olist arabic">
 <div class="title">手順</div>
@@ -1063,96 +1294,18 @@
 <p>［ * 同期 ］ &gt; ［ データブローカーの管理 * ］ をクリックします。</p>
 </li>
 <li>
-<p>アクションメニューをクリックし、 * グループ名の編集 * を選択します。</p>
+<p>アクションメニューをクリックし、 * グループの削除 * を選択します。</p>
 <div class="paragraph">
-<p><span class="image"><img src="./media/screenshot_sync_group_edit.gif" alt="グループ内の個々のデータブローカーで使用可能なアクションメニューのスクリーンショット。"></span></p>
+<p><span class="image"><img src="./media/screenshot_sync_group_add.png" alt="グループ内の個々のデータブローカーで使用可能なアクションメニューのスクリーンショット。"></span></p>
 </div>
 </li>
 <li>
-<p>新しい名前を入力し、 * 保存 * をクリックします。</p>
+<p>確認するには、グループの名前を入力し、 * グループの削除 * をクリックします。</p>
 </li>
 </ol>
 </div>
 <div class="paragraph">
-<p>Cloud Sync によってデータブローカーグループの名前が更新されます。</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="データブローカーの問題に対処">データブローカーの問題に対処</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Cloud Sync では、問題のトラブルシューティングに役立つ各データブローカーのステータスが表示されます。</p>
-</div>
-<div class="olist arabic">
-<div class="title">手順</div>
-<ol class="arabic">
-<li>
-<p>ステータスが「 Unknown 」または「 Failed 」のデータブローカーを特定します。</p>
-<div class="paragraph">
-<p><span class="image"><img src="./media/screenshot_sync_broker_status.gif" alt=""></span></p>
-</div>
-</li>
-<li>
-<p>の上にカーソルを置きます <span class="image"><img src="./media/screenshot_sync_status_icon.gif" alt=""></span> アイコンをクリックして失敗の理由を確認してください。</p>
-</li>
-<li>
-<p>問題を修正します。</p>
-<div class="paragraph">
-<p>たとえば、オフラインのデータブローカーを再起動するだけで、初期導入に失敗した場合はデータブローカーの削除が必要になることがあります。</p>
-</div>
-</li>
-</ol>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="データブローカーグループのユニファイド構成を定義する">データブローカーグループのユニファイド構成を定義する</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>同期プロセス中に同期関係でエラーが発生した場合は、データブローカーグループの同時実行を統合すると、同期エラーの数を減らすことができます。グループの設定を変更すると、転送速度が遅くなるため、パフォーマンスに影響する可能性があります。</p>
-</div>
-<div class="paragraph">
-<p>自分で設定を変更することはお勧めしません。設定を変更するタイミングと変更方法については、ネットアップに相談してください。</p>
-</div>
-<div class="olist arabic">
-<div class="title">手順</div>
-<ol class="arabic">
-<li>
-<p>［ * データブローカーの管理 * ］ をクリックします。</p>
-</li>
-<li>
-<p>データブローカーグループの [ 設定 ] アイコンをクリックします。</p>
-<div class="paragraph">
-<p><span class="image"><img src="./media/screenshot_sync_group_settings.png" alt="データブローカーグループの設定アイコンを示すスクリーンショット。"></span></p>
-</div>
-</li>
-<li>
-<p>必要に応じて設定を変更し、 * Unify Configuration* をクリックします。</p>
-<div class="paragraph">
-<p>次の点に注意してください。</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>変更する設定を選択できます。 4 つすべてを一度に変更する必要はありません。</p>
-</li>
-<li>
-<p>新しい構成がデータブローカーに送信されると、データブローカーは自動的に再起動し、新しい構成を使用します。</p>
-</li>
-<li>
-<p>変更が反映されて Cloud Sync インターフェイスに表示されるまで、 1 分程度かかる場合があります。</p>
-</li>
-<li>
-<p>データブローカーが実行されていないと、 Cloud Sync がデータブローカーと通信できないため、設定が変更されません。データブローカーが再起動すると設定が変更されます。</p>
-</li>
-<li>
-<p>ユニファイド構成を設定すると、新しいデータブローカーでは自動的に新しい構成が使用されます。</p>
-</li>
-</ul>
-</div>
-</li>
-</ol>
+<p>Cloud Sync によってデータブローカーが削除され、グループが削除されます。</p>
 </div>
 </div>
 </div>
@@ -1169,98 +1322,122 @@
   <div class="n-footer__bottom">
     <div class="n-container">
       <div class="n-footer__bottom-left">
-
         <div class="n-footer__copyright">
           <ul class="n-footer__copyright-list">
             <li class="n-footer__copyright-link">
-            <a href="https://www.netapp.com/us/legal/copyright.aspx">© 2022 NetApp, Inc.</a>
+              <a href="https://www.netapp.com/us/legal/copyright.aspx">© 2022 NetApp, Inc.</a>
             </li>
-
-</ul>
-</div>
-<div class="n-footer__social-links">
-<ul class="n-footer__social-link-list">
-<li class="n-footer__social-link-list-item">
-<a class="n-footer__social-link" data-ntap-social="follow-blog" href="https://blog.netapp.com" target="_blank" title="blog" alt="blog">
-<span class="n-footer__social-link-text">blog</span>
-<svg class="n-icon-blog n-footer__social-link-icon" aria-labelledby="title">
-  <title>blog@</title>
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ja-jp/cloud-manager-sync/common/svg/sprite.svg#blog"></use>
-</svg>
-
-</a>
-</li>
-<li class="n-footer__social-link-list-item">
-<a class="n-footer__social-link" data-ntap-social="follow-community" href="https://community.netapp.com/" target="_blank" title="community" alt="community">
-<span class="n-footer__social-link-text">community</span>
-<svg class="n-icon-community n-footer__social-link-icon" aria-labelledby="title">
-<title>community@</title>
-<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ja-jp/cloud-manager-sync/common/svg/sprite.svg#comments"></use>
-</svg>
-
-</a>
-</li>
-<li class="n-footer__social-link-list-item">
-<a class="n-footer__social-link" data-ntap-social="follow-twitter" href="https://twitter.com/netapp" target="_blank" title="twitter" alt="twitter">
-<span class="n-footer__social-link-text">twitter</span>
-<svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
-<title>twitter@</title>
-<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ja-jp/cloud-manager-sync/common/svg/sprite.svg#twitter"></use>
-</svg>
-
-</a>
-</li>
-<li class="n-footer__social-link-list-item">
-<a class="n-footer__social-link" data-ntap-social="follow-facebook" href="https://www.facebook.com/NetApp" target="_blank" title="facebook" alt="facebook">
-<span class="n-footer__social-link-text">facebook</span>
-<svg class="n-icon-facebook n-footer__social-link-icon" aria-labelledby="title">
-<title>facebook@</title>
-<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ja-jp/cloud-manager-sync/common/svg/sprite.svg#facebook"></use>
-</svg>
-
-</a>
-</li>
-<li class="n-footer__social-link-list-item">
-<a class="n-footer__social-link" data-ntap-social="follow-linkedin" href="https://www.linkedin.com/company/netapp" target="_blank" title="linkedin" alt="linkedin">
-<span class="n-footer__social-link-text">linkedin</span>
-<svg class="n-icon-linkedin n-footer__social-link-icon" aria-labelledby="title">
-<title>linkedin@</title>
-<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ja-jp/cloud-manager-sync/common/svg/sprite.svg#linkedin"></use>
-</svg>
-
-</a>
-</li>
-<li class="n-footer__social-link-list-item">
-<a class="n-footer__social-link" data-ntap-social="follow-youtube" href="https://www.youtube.com/user/NetAppTV" target="_blank" title="youtube" alt="youtube">
-<span class="n-footer__social-link-text">youtube</span>
-<svg class="n-icon-youtube n-footer__social-link-icon" aria-labelledby="title">
-<title>youtube@</title>
-<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ja-jp/cloud-manager-sync/common/svg/sprite.svg#youtube"></use>
-</svg>
-
-</a>
-</li>
-<li class="n-footer__social-link-list-item">
-<a class="n-footer__social-link" data-ntap-social="follow-slideshare" href="https://www.slideshare.net/NetApp" target="_blank" title="slideshare" alt="slideshare">
-<span class="n-footer__social-link-text">slideshare</span>
-<svg class="n-icon-slideshare n-footer__social-link-icon" aria-labelledby="title">
-<title>slideshare@</title>
-<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ja-jp/cloud-manager-sync/common/svg/sprite.svg#slideshare"></use>
-</svg>
-
-</a>
-</li>
-</ul>
-</div>
-
-</div>
-<div class="n-footer__bottom-right">
-  <p class="n-footer__fine-print">Web サイトについてのフィードバックを<a target="_self" href="javascript:netapp_mailto()" class="n-footer__copyright">お寄せください</a>
-  <a href="https://docs.netapp.com/ja-jp/announcements/" class="n-footer__copyright">お知らせ</a>
-  </p>
-</div>
-</div>
-</div>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/terms-of-use/">利用条件</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/privacy-policy/">プライバシー ポリシー</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/cookie-policy/">クッキー ポリシー</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a class="ot-sdk-show-settings">クッキーの設定</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="n-footer__bottom-right">
+        <div class="n-footer__copyright">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+              <span class="n-footer__fine-print">Web サイトについてのフィードバックを</span>
+              <a target="_self" href="javascript:netapp_mailto()">お寄せください</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://docs.netapp.com/ja-jp/announcements/">お知らせ</a>
+            </li>
+          </ul>
+        </div>
+        <div class="n-footer__social-links">
+          <ul class="n-footer__social-link-list">
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-blog" href="https://blog.netapp.com"
+                target="_blank" title="blog" alt="blog">
+                <span class="n-footer__social-link-text">blog</span>
+                <svg class="n-icon-blog n-footer__social-link-icon" aria-labelledby="title">
+                  <title>blog@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/ja-jp/cloud-manager-sync/common/svg/sprite.svg#blog"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-community" href="https://community.netapp.com/"
+                target="_blank" title="community" alt="community">
+                <span class="n-footer__social-link-text">community</span>
+                <svg class="n-icon-community n-footer__social-link-icon" aria-labelledby="title">
+                  <title>community@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/ja-jp/cloud-manager-sync/common/svg/sprite.svg#comments"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-twitter" href="https://twitter.com/netapp"
+                target="_blank" title="twitter" alt="twitter">
+                <span class="n-footer__social-link-text">twitter</span>
+                <svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
+                  <title>twitter@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/ja-jp/cloud-manager-sync/common/svg/sprite.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-facebook" href="https://www.facebook.com/NetApp"
+                target="_blank" title="facebook" alt="facebook">
+                <span class="n-footer__social-link-text">facebook</span>
+                <svg class="n-icon-facebook n-footer__social-link-icon" aria-labelledby="title">
+                  <title>facebook@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/ja-jp/cloud-manager-sync/common/svg/sprite.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-linkedin"
+                href="https://www.linkedin.com/company/netapp" target="_blank" title="linkedin" alt="linkedin">
+                <span class="n-footer__social-link-text">linkedin</span>
+                <svg class="n-icon-linkedin n-footer__social-link-icon" aria-labelledby="title">
+                  <title>linkedin@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/ja-jp/cloud-manager-sync/common/svg/sprite.svg#linkedin"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-youtube"
+                href="https://www.youtube.com/user/NetAppTV" target="_blank" title="youtube" alt="youtube">
+                <span class="n-footer__social-link-text">youtube</span>
+                <svg class="n-icon-youtube n-footer__social-link-icon" aria-labelledby="title">
+                  <title>youtube@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/ja-jp/cloud-manager-sync/common/svg/sprite.svg#youtube"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-slideshare"
+                href="https://www.slideshare.net/NetApp" target="_blank" title="slideshare" alt="slideshare">
+                <span class="n-footer__social-link-text">slideshare</span>
+                <svg class="n-icon-slideshare n-footer__social-link-icon" aria-labelledby="title">
+                  <title>slideshare@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/ja-jp/cloud-manager-sync/common/svg/sprite.svg#slideshare"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </footer>
 
       </div><!-- Elasticsearch JS -->
