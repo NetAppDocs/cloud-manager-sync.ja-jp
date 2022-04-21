@@ -745,10 +745,7 @@
   <block id="e83e5674ab295a6613b60f5e12d1bfe3" category="list-text">NFS サーバ</block>
   <block id="876d9b7b1c11a792f25a0e1e9dbf31dd" category="list-text">SMB サーバ</block>
   <block id="f83bcb8e69c5f1d1eb29cddacb8374b0" category="list-text">SMB サーバ</block>
-  <block id="05fc5760e6773a5e87f7fe0bb48c29ed" category="list-text">ボックス ^2 、 3^</block>
-  <block id="34b98f7ba53befc78287d863ace2c006" category="cell">ボックス ^2</block>
   <block id="c17ce6a7cdcb97581c6d5603ec7d447a" category="cell">オンプレミスの ONTAP クラスタ</block>
-  <block id="55d5b6dbf906d2bf27a6569938b053e5" category="cell">SFTP^1</block>
   <block id="e2ab7c65b21ed8cc1c3b642b5e36429e" category="cell">S3</block>
   <block id="2a01d572b1447155c310cabafac3fae9" category="paragraph">注：</block>
   <block id="6b851b2682356f2e929b17451db9ba27" category="list-text">このソース / ターゲットとの同期関係は、 Cloud Sync API のみを使用してサポートされています。</block>
@@ -1472,4 +1469,6 @@
   <block id="bece28b158ab337d9ed24b00d7d02cc7" category="list-text">[ * お問い合わせ * ] をクリックして、ネットアップ・テクニカル・サポートの電話番号を検索してください。</block>
   <block id="efe81cff8e6f47ec59ef94167b76bf5a" category="list-text">[ * 問題 を開く * ] をクリックし、いずれかのオプションを選択して、 [ * 送信 * ] をクリックします。</block>
   <block id="cbb1040836732e478409dacf7e45171a" category="paragraph">ネットアップの担当者がケースを確認し、すぐに対応を開始します。</block>
+  <block id="c07503bbdaf42732886b6b9f136d9eb0" category="list-text">ボックス ^1</block>
+  <block id="c01bb6a5867adae467a31539eda72b37" category="cell">SFTP^2^</block>
 </blocks>

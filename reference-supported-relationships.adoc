@@ -63,7 +63,7 @@ Cloud Sync を使用すると、ソースからターゲットへデータを同
 * Amazon S3
 * Azure Blob の略
 * Azure NetApp Files の特長
-* ボックス ^2 、 3^
+* ボックス ^1
 * Cloud Volumes ONTAP
 * Cloud Volumes Service
 * Google クラウドストレージ
@@ -112,8 +112,11 @@ Cloud Sync を使用すると、ソースからターゲットへデータを同
 
 
 
-| ボックス ^2  a| 
+| ボックス ^1  a| 
 * Amazon S3
+* ONTAP 対応の Amazon FSX
+* Azure NetApp Files の特長
+* Cloud Volumes ONTAP
 * IBM クラウドオブジェクトストレージ
 * NFS サーバ
 * SMB サーバ
@@ -183,7 +186,7 @@ Cloud Sync を使用すると、ソースからターゲットへデータを同
 * Amazon S3
 * Azure Blob の略
 * Azure NetApp Files の特長
-* ボックス ^2 、 3^
+* ボックス ^1
 * Cloud Volumes ONTAP
 * Cloud Volumes Service
 * Google クラウドストレージ
@@ -241,7 +244,7 @@ Cloud Sync を使用すると、ソースからターゲットへデータを同
 
 
 
-| SFTP^1 | S3 
+| SFTP^2^ | S3 
 
 
 | SMB サーバ  a| 
@@ -269,7 +272,7 @@ Cloud Sync を使用すると、ソースからターゲットへデータを同
 * Amazon S3
 * Azure Blob の略
 * Azure NetApp Files の特長
-* ボックス ^2 、 3^
+* ボックス ^1
 * Cloud Volumes ONTAP
 * Cloud Volumes Service
 * Google クラウドストレージ
@@ -284,8 +287,8 @@ Cloud Sync を使用すると、ソースからターゲットへデータを同
 |===
 注：
 
-. このソース / ターゲットとの同期関係は、 Cloud Sync API のみを使用してサポートされています。
 . Box サポートはプレビューとして利用できます。
+. このソース / ターゲットとの同期関係は、 Cloud Sync API のみを使用してサポートされています。
 . BLOB コンテナがターゲットの場合は、特定の Azure BLOB ストレージ階層を選択できます。
 +
 ** ホットストレージ
