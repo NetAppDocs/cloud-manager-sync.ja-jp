@@ -113,8 +113,8 @@ Cloud Sync を使用すると、ソースからターゲットへデータを同
 
 
 | ボックス ^1  a| 
-* Amazon S3
 * ONTAP 対応の Amazon FSX
+* Amazon S3
 * Azure NetApp Files の特長
 * Cloud Volumes ONTAP
 * IBM クラウドオブジェクトストレージ

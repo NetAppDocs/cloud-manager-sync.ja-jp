@@ -33,7 +33,7 @@ summary: 同期関係を作成すると、 Cloud Sync サービスはソース�
 .手順
 . 作業環境を作成または検出します。
 +
-** https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-creating-fsx-working-environment.html["ONTAP 作業環境用の Amazon FSX を作成します"^]
+** https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/start/task-getting-started-fsx.html["ONTAP 作業環境用の Amazon FSX を作成します"^]
 ** https://docs.netapp.com/us-en/cloud-manager-azure-netapp-files/task-quick-start.html["Azure NetApp Files をセットアップおよび検出しています"^]
 ** https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-otc-aws.html["AWS での Cloud Volumes ONTAP の起動"^]
 ** https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-otc-azure.html["Azure で Cloud Volumes ONTAP を起動します"^]
