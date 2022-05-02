@@ -18,6 +18,28 @@ Cloud Sync の新機能をご確認ください。
 
 
 
+== 2022年5月1日
+
+
+
+=== 同期タイムアウト
+
+新しい* Sync Timeout *設定を同期関係に使用できるようになりました。この設定を使用すると、指定した時間数または日数内に同期が完了していない場合にCloud Sync でデータの同期をキャンセルするかどうかを定義できます。
+
+https://docs.netapp.com/us-en/cloud-manager-sync/task-managing-relationships.html#changing-the-settings-for-a-sync-relationship["同期関係の設定の変更の詳細については、こちらをご覧ください"]。
+
+
+
+=== 通知
+
+新しい* Notifications *設定を同期関係に使用できるようになりました。この設定を使用すると、Cloud Sync 通知をCloud Managerの通知センターで受信するかどうかを選択できます。データの同期が成功した場合、データの同期が失敗した場合、データの同期がキャンセルされた場合の通知を有効にできます。
+
+image:https://raw.githubusercontent.com/NetAppDocs/cloud-manager-sync/main/media/screenshot-notification-center.png["Cloud Managerの通知センターを示すスクリーンショット。"]
+
+https://docs.netapp.com/us-en/cloud-manager-sync/task-managing-relationships.html#changing-the-settings-for-a-sync-relationship["同期関係の設定の変更の詳細については、こちらをご覧ください"]。
+
+
+
 == 2022 年 4 月 3 日
 
 

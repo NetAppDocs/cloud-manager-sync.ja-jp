@@ -1035,7 +1035,6 @@
   <block id="df8514e24a07bfd81c667163f17fbec0" category="paragraph">中国、米国政府、米国国防総省を除くすべての地域がサポートされます。</block>
   <block id="a1e31a9251ce00d752f2ef3d40f3fa3a" category="paragraph">Cloud Sync は、データブローカーを Azure に導入するときに、必要なアウトバウンド通信を有効にするセキュリティグループを作成します。</block>
   <block id="38354aeafcfd5993a9d65d97514a8e3d" category="section-title">認証方式</block>
-  <block id="5f01cb10cf737db33ea0f9db4e40cc94" category="paragraph">データブローカーを導入する際には、認証方式として、パスワードまたは SSH 公開鍵ペアを選択する必要があります。</block>
   <block id="0be7700ba4689baa197ac3c2b94928a5" category="inline-link">Azure のドキュメント：「 Create and use an SSH public-private key pair for Linux VMs in Azure</block>
   <block id="4e2153a19cb9d86adf7b5ba332e78a45" category="paragraph">キー・ペアの作成方法については、を参照してください<block ref="3bfff4aa3d3a3eae965cce9b3b615a4a" category="inline-link-rx"></block>。</block>
   <block id="896293b91a375c72889dc16e1c816e72" category="paragraph">新しいデータブローカーを作成する方法はいくつかあります。以下の手順では、同期関係を作成する際にデータブローカーを Azure にインストールする方法について説明します。</block>
@@ -1471,4 +1470,18 @@
   <block id="c07503bbdaf42732886b6b9f136d9eb0" category="list-text">ボックス ^1</block>
   <block id="c01bb6a5867adae467a31539eda72b37" category="cell">SFTP^2^</block>
   <block id="6cd346b36825d1f1cef046571571fce0" category="list-text"><block ref="6cd346b36825d1f1cef046571571fce0" category="inline-link-rx"></block></block>
+  <block id="81fb4d1570abd75a1e2945d1f1c9f8cc" category="section-title">2022年5月1日</block>
+  <block id="5cccebf55aa4da23124f776528630bf3" category="section-title">同期タイムアウト</block>
+  <block id="5e4a50a7111ce8bba22cd01d07f86a3b" category="paragraph">新しい* Sync Timeout *設定を同期関係に使用できるようになりました。この設定を使用すると、指定した時間数または日数内に同期が完了していない場合にCloud Sync でデータの同期をキャンセルするかどうかを定義できます。</block>
+  <block id="5f03ed55634cfe3f169d94549e45f06c" category="paragraph"><block ref="050cf03a98debb532006e420507b54cf" category="inline-link-rx"></block>。</block>
+  <block id="a274f4d4670213a9045ce258c6c56b80" category="section-title">通知</block>
+  <block id="0a3f4ee017f808dc79fb4939a3eaf91b" category="paragraph">新しい* Notifications *設定を同期関係に使用できるようになりました。この設定を使用すると、Cloud Sync 通知をCloud Managerの通知センターで受信するかどうかを選択できます。データの同期が成功した場合、データの同期が失敗した場合、データの同期がキャンセルされた場合の通知を有効にできます。</block>
+  <block id="9081c0430b4e4fcf1f0dd042e7c0ca60" category="inline-image-macro">Cloud Managerの通知センターを示すスクリーンショット。</block>
+  <block id="914b918c172fa270f423df8135932978" category="paragraph"><block ref="914b918c172fa270f423df8135932978" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="64b10e9eb890594a5a1756353aca634b" category="list-text">同期タイムアウト</block>
+  <block id="4affab38ec04e06031b349c8bc2e8e59" category="list-text">指定した時間数または日数以内に同期が完了しなかった場合に、Cloud Sync がデータの同期をキャンセルするかどうかを定義します。</block>
+  <block id="870569e17f9da6759aebc4bec6749d61" category="list-text">Cloud Managerの通知センターでCloud Sync 通知を受信するかどうかを選択できます。データの同期が成功した場合、データの同期が失敗した場合、データの同期がキャンセルされた場合の通知を有効にできます。</block>
+  <block id="c658fd4f091c10877f154fbf84fbee89" category="section-title">Azureにデータブローカーを導入するための権限が必要です</block>
+  <block id="180af86c5f798e1a752bebb100366ffb" category="paragraph">データブローカーの導入に使用するAzureユーザアカウントに、次の権限があることを確認してください。</block>
+  <block id="e507d0455db379d4826dabce8ecb97ed" category="paragraph">データブローカーを導入する場合、仮想マシンの認証方式として、パスワードまたはSSH公開鍵ペアを選択する必要があります。</block>
 </blocks>
