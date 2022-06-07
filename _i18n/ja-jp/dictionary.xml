@@ -210,7 +210,6 @@
   <block id="f74b1a14b7639ecef72e594fe96eb745" category="list-text">オブジェクトのコピー</block>
   <block id="d2280a978447122c6ab7b62ac99c6588" category="list-text">オブジェクトストレージのメタデータとタグをコピーする場合は、このオプションを有効にします。ユーザがソース上のメタデータを変更すると、 Cloud Sync は次の同期でこのオブジェクトをコピーしますが、ユーザがソース上のタグを変更した場合（データ自体は変更した場合を除く）、 Cloud Sync は次回の同期でそのオブジェクトをコピーしません。</block>
   <block id="e998b72bf009ad1c34dfd7fbf7e26388" category="paragraph">関係の作成後にこのオプションを編集することはできません。</block>
-  <block id="87108e54d2a298427a5c439efc86720f" category="paragraph">タグのコピーは、 S3 互換エンドポイント（ S3 、 StorageGRID 、または IBM Cloud Object Storage ）を含む同期関係でサポートされます。</block>
   <block id="06902a5661d713ae255404d1b76c3108" category="paragraph">メタデータのコピーは、次のいずれかのエンドポイント間の「クラウド間」関係でサポートされます。</block>
   <block id="128edc3ff8c2d69c9c76b866643314ec" category="list-text">AWS S3</block>
   <block id="52745271323ee9ea30e3a37d0338d118" category="list-text">Azure Blob の略</block>
@@ -894,8 +893,6 @@
   <block id="e9d1cd1913b22fd9324ade51470e79fb" category="list-text">StorageGRID -&gt; IBM クラウドオブジェクトストレージ</block>
   <block id="d5467cdf0f31f137fc693f242bb4f9ed" category="list-text">IBM Cloud Object Storage -&gt; StorageGRID の順にクリックします</block>
   <block id="4ead6076cd3ac3f5021ec4c7be28c427" category="list-text">IBM Cloud Object Storage -&gt; IBM Cloud Object Storage</block>
-  <block id="cf92849b844c61464026b83534370159" category="inline-link-macro">同期関係の作成時に設定を有効にします</block>
-  <block id="1e6c7a42798986bf930479decdfb6353" category="paragraph">^1 この同期関係には、以下が必要です <block ref="03984181b8f01cdbd96b3f54d00056a4" category="inline-link-macro-rx"></block>。</block>
   <block id="9446a98ad14416153cc4d45ab8b531bf" category="section-title">パフォーマンス</block>
   <block id="d1ac9671b7bcf06bf5d1080fe70853b0" category="paragraph">クラウド同期のパフォーマンスに関する質問は次のとおりです。</block>
   <block id="678b59fd02ed47602217c203bce0f237" category="section-title">同期関係の進行状況インジケータは何を表していますか。</block>
@@ -1310,7 +1307,6 @@
   <block id="172d12b0279cc8a60f5a9ab00242df4e" category="paragraph">Cloud Sync は、既存のライセンスを新しい有効期限で更新します。</block>
   <block id="3c10116b37b407ac79092a38ffb292e4" category="summary">ネットアップテクニカルサポートでサポートケースをオープンするには、事前に Cloud Manager にネットアップサポートサイトのアカウントを追加し、サポートに登録しておく必要があります。</block>
   <block id="42748df9eaa0be17ddc5cc1593cf57ab" category="doc">サポートに登録します</block>
-  <block id="7ff191df90fac0fa94ab5c2b5101a5e9" category="sidebar">Cloud Manager のすべてのドキュメント</block>
   <block id="eab057480b500e5181f47e393918143e" category="sidebar">Cloud Sync ドキュメント</block>
   <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">リリースノート</block>
   <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">新機能</block>
@@ -1484,4 +1480,31 @@
   <block id="c658fd4f091c10877f154fbf84fbee89" category="section-title">Azureにデータブローカーを導入するための権限が必要です</block>
   <block id="180af86c5f798e1a752bebb100366ffb" category="paragraph">データブローカーの導入に使用するAzureユーザアカウントに、次の権限があることを確認してください。</block>
   <block id="e507d0455db379d4826dabce8ecb97ed" category="paragraph">データブローカーを導入する場合、仮想マシンの認証方式として、パスワードまたはSSH公開鍵ペアを選択する必要があります。</block>
+  <block id="62ee9336109ed1c4538423613b856682" category="section-title">2022年6月6日</block>
+  <block id="c20246791a0594003975011a29aae438" category="section-title">継続的な同期</block>
+  <block id="ade9a1db23f7d605ed4e98f520c46b00" category="paragraph">新しい設定を使用すると、ソースのS3バケットからターゲットに変更を継続的に同期できます。</block>
+  <block id="2aaa6a5839225ec7e874d5c5c1af43df" category="paragraph">初期データ同期が完了すると、Cloud Sync はソースS3バケットで変更をリスンし、ターゲットへの変更が発生した場合はその変更を継続的に同期します。ソースを定期的に再スキャンする必要はありません。この設定は、S3バケットからS3、Google Cloud Storage、Azure BLOBストレージ、StorageGRID 、またはIBMストレージに同期する場合にのみ使用できます。</block>
+  <block id="969431a3ee7466b53b917ad1bc5d032a" category="paragraph">データブローカーに関連付けられているIAMロールでは、この設定を使用するために次の権限が必要です。</block>
+  <block id="8817adc7e5de41abc6dded623fbb60a9" category="paragraph">これらの権限は、新しく作成したすべてのデータブローカーに自動的に追加されます。</block>
+  <block id="f23841b65ba519d2dd6a63a2a3e4de83" category="inline-link-macro">Continuous Syncの詳細については、こちらをご覧ください</block>
+  <block id="9bc62ddcbad4365043432f4afd539ab9" category="paragraph"><block ref="b78c060d9cafb1faa0c3c10254143905" category="inline-link-macro-rx"></block>。</block>
+  <block id="3d7f78f24cbebe2c601558e90c9fe15f" category="section-title">すべてのONTAP ボリュームを表示します</block>
+  <block id="517d881d38e3ddd50495a5763ac986b4" category="paragraph">同期関係を作成するときに、ソースCloud Volumes ONTAP システム、オンプレミスONTAP クラスタ、またはCloud Sync ONTAP ファイルシステムのFSXにすべてのボリュームが表示されるようになりました。</block>
+  <block id="9de2181e94c0cd08ea8823917ee87c3f" category="paragraph">以前は、Cloud Sync では、選択したプロトコルに一致するボリュームのみが表示されていました。すべてのボリュームが表示されますが、選択したプロトコルに一致しないボリュームや、共有やエクスポートがないボリュームはグレー表示され、選択できません。</block>
+  <block id="7f5581e89068d302a142aecf7d19a771" category="section-title">Azure Blobへのタグのコピー</block>
+  <block id="32aae8f84d3fb43aff2913dafe7d72e0" category="paragraph">Azure Blobがターゲットである同期関係を作成する際に、Cloud Sync でタグをAzure BLOBコンテナにコピーできるようになりました。</block>
+  <block id="718cef647cf171d07e94f6c003056c56" category="list-text">[*設定*（* Settings *）]ページでは、[*オブジェクトのコピー*（* Copy for Objects *）]設定を使用して、ソースからAzure BLOBコンテナにタグをコピーできます。これは、メタデータのコピーに加えて機能します。</block>
+  <block id="37e1492974d1c0a4febae33433a14d3f" category="list-text">* Tags/Metadata*ページで、Azure BLOBコンテナにコピーされるオブジェクトに設定するBLOBインデックスタグを指定できます。以前は、関係のメタデータしか指定できませんでした。</block>
+  <block id="bb775e1249cce6f8004e5212d3f37d10" category="paragraph">これらのオプションは、Azure Blobがターゲットで、ソースがAzure BlobエンドポイントまたはS3互換エンドポイント（S3、StorageGRID 、IBM Cloud Object Storage）の場合にサポートされます。</block>
+  <block id="6e272326d37ff30b30c39df1796c1047" category="list-text">継続的同期</block>
+  <block id="8ed3a39cc9f2a70ec95bb16dd2f2fb23" category="list-text">初期データ同期が完了すると、Cloud Sync はソースS3バケットで変更をリスンし、ターゲットへの変更が発生した場合はその変更を継続的に同期します。ソースを定期的に再スキャンする必要はありません。</block>
+  <block id="81e275e8d051ed5b97b6b40caeb6e335" category="paragraph">この設定は、同期関係を作成する場合、およびS3バケットからS3、Google Cloud Storage、Azure BLOBストレージ、StorageGRID 、またはIBMストレージに同期する場合にのみ使用できます。</block>
+  <block id="2be3dcdda5218111239a3d0174add0a9" category="paragraph">この設定を有効にすると、他の機能に次のように影響します。</block>
+  <block id="cf6e8568cffe2257079f8cf83e628dad" category="list-text">同期スケジュールが無効になっています。</block>
+  <block id="ff156b37c42c21d99850e977fcdb1ebd" category="list-text">次の設定がデフォルト値に戻ります。同期タイムアウト、最近変更されたファイル、更新日。</block>
+  <block id="f60a1149c02808459c5643cc5df3f925" category="list-text">サイズでフィルタは、コピーイベントに対してのみアクティブになります（削除イベントに対してはアクティブになりません）。</block>
+  <block id="06188761055a99a60d4ecac698ce5c29" category="list-text">関係を作成したあとは、関係を高速化または削除する必要があります。同期の中止、設定の変更、レポートの表示はできません。</block>
+  <block id="471d3dbea565333e7aac2e693d15e28e" category="paragraph">ターゲットにAzure BlobまたはS3互換エンドポイント（S3、StorageGRID 、IBM Cloud Object Storage）を含む同期関係では、タグのコピーがサポートされます。</block>
+  <block id="19656389ea4b802da6413eff0a250187" category="inline-link-macro">同期関係を作成するときに、[オブジェクトのコピー]設定を有効にします</block>
+  <block id="89176f15cb099a09a71af33d00c1d7b5" category="paragraph">^1 この同期関係には、以下が必要です <block ref="a7dd81f666bee66d77494e96987d22b4" category="inline-link-macro-rx"></block>。</block>
 </blocks>

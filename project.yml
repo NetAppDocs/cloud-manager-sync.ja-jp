@@ -10,8 +10,6 @@ settings:
   langs: ja-jp,us-en,zh-cn,zh-tw,ko-kr
 sidebar:
   entries:
-  - title: Cloud Manager のすべてのドキュメント
-    url: https://docs.netapp.com/us-en/cloud-manager-family
   - title: Cloud Sync ドキュメント
     url: "/index.html"
   - title: リリースノート
@@ -111,3 +109,4 @@ homepage:
 product-family:
   name: Cloud Manager
   repo: cloud-manager-family
+  sidebar_label: All Cloud Manager documentation
