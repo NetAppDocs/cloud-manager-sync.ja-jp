@@ -78,7 +78,6 @@ NOTE: Cloud Volumes Service と Azure NetApp Files には Cloud Sync 関係が�
 
 Cloud Sync をクラウドの外部で使用する場合、次の点に注意してください。
 
-* オンプレミス同期の場合、プライベート Amazon S3 バケットを NetApp StorageGRID で利用できます。
 * データブローカーグループには、 Cloud Sync サービスと通信するためのインターネット接続が必要です。
 * ネットアップからライセンスを直接購入しない場合は、従量課金制の Cloud Sync サービスを利用する AWS または Azure のアカウントが必要です。
 
