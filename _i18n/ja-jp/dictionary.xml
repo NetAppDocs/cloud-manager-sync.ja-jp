@@ -757,7 +757,6 @@
   <block id="50abff7eab122064034a22ce7ec10c49" category="list-text">インテリジェント階層化</block>
   <block id="7a1255ccd32375deedb79fe52eed93f5" category="list-text">標準的なアクセス頻度は低い</block>
   <block id="e2b0c2a0a664cef2184b3d17808db4ce" category="list-text">1 回のアクセスではほとんど発生しません</block>
-  <block id="4def2a084469f97f6372bfaf0823941b" category="list-text">氷河</block>
   <block id="d2f79b4db321be04fd1439394fb99d3c" category="list-text">Glacier Deep Archive</block>
   <block id="95e5c9b9a242ae01ebbab296e59e2a68" category="list-text">Google Cloud Storage バケットがターゲットの場合は、特定のストレージクラスを選択できます。</block>
   <block id="ffaf5cab0f09c40c02f73eeea249b6ce" category="summary">ネットアップには、 Cloud Sync サービスの使用中に指定したクレデンシャルへのアクセス権がありません。クレデンシャルは、ネットワーク内のデータブローカーマシンに直接保存されます。</block>
@@ -1506,4 +1505,5 @@
   <block id="16bfbdd0b4d440a858cdccf55f911337" category="list-text">AWSの行政機関向けのサービスです</block>
   <block id="580e905670d084cfe8e8e4ce2cd2899b" category="list-text">Azure Governmentリージョン</block>
   <block id="ae54a5c026f31ada088992587d92cb3a" category="list-text">中国</block>
+  <block id="cbe97248e70516b3413b9658af8e4825" category="list-text">Glacierの柔軟な取得</block>
 </blocks>
