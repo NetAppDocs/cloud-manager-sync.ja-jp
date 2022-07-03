@@ -204,6 +204,7 @@ Cloud Sync を使用すると、ソースからターゲットへデータを同
 * ONTAP 対応の Amazon FSX
 * Amazon S3
 * Azure Blob の略
+* Azure Data Lake Storage Gen2
 * Azure NetApp Files の特長
 * Cloud Volumes ONTAP
 * Cloud Volumes Service
@@ -252,6 +253,7 @@ Cloud Sync を使用すると、ソースからターゲットへデータを同
 * ONTAP 対応の Amazon FSX
 * Amazon S3
 * Azure Blob の略
+* Azure Data Lake Storage Gen2
 * Azure NetApp Files の特長
 * Cloud Volumes ONTAP
 * Cloud Volumes Service

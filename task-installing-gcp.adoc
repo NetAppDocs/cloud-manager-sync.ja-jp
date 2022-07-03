@@ -67,9 +67,22 @@ Cloud Sync が Google Cloud にデータブローカーを導入すると、必�
 - storage.buckets.list
 - storage.objects.*
 - iam.serviceAccounts.signJwt
+- pubsub.subscriptions.consume
+- pubsub.subscriptions.create
+- pubsub.subscriptions.delete
+- pubsub.subscriptions.list
+- pubsub.topics.attachSubscription
+- pubsub.topics.create
+- pubsub.topics.delete
+- pubsub.topics.list
+- pubsub.topics.setIamPolicy
+- storage.buckets.update
 ----
+注：
 
-NOTE: 「 iam.serviceAccounts.signJwt" 」権限が必要なのは、外部の橋本ボルトを使用するようにデータブローカーを設定する予定の場合のみです。
+. 「 iam.serviceAccounts.signJwt" 」権限が必要なのは、外部の橋本ボルトを使用するようにデータブローカーを設定する予定の場合のみです。
+. 「pubsub.*」権限と「storage.enable」は、Google Cloud Storageから別のクラウドストレージ上の同期関係に対してContinuous Sync設定を有効にする場合にのみ必要です。 link:task-creating-relationships.html#settings["継続的同期オプションの詳細については、こちらをご覧ください"]。
+
 
 
 
@@ -136,7 +149,7 @@ Google Cloud にデータブローカーを導入し、新しい同期関係を�
 
 Cloud Sync は、 Google Cloud に次の構成でデータブローカーを作成します。
 
-マシンのタイプ:: N1-standard-4
+マシンのタイプ:: N2 - 標準 -4
 vCPU:: 4.
 RAM:: 15 GB
 オペレーティングシステム:: Red Hat Enterprise Linux 7.7

@@ -18,6 +18,64 @@ Cloud Sync の新機能をご確認ください。
 
 
 
+== 2022年7月3日
+
+
+
+=== Azure Data Lake Storage Gen2のサポート
+
+NFSサーバまたはSMBサーバからAzure Data Lake Storage Gen2へデータを同期できるようになりました。
+
+Azureデータレイクを含む同期関係を作成する場合は、Cloud Sync にストレージアカウントの接続文字列を指定する必要があります。共有アクセスシグニチャ（SAS）ではなく、通常の接続文字列である必要があります。
+
+link:reference-supported-relationships.html["サポートされている同期関係のリストを表示します"]。
+
+
+
+=== Google Cloud Storageからの継続的な同期
+
+ソースのGoogle Cloud Storageバケットからクラウドストレージターゲットへ、継続的な同期設定がサポートされるようになりました。
+
+Cloud Sync は、初回のデータ同期後、ソースのGoogle Cloud Storageバケットで変更をリスンし、変更が発生した場合はターゲットに継続的に同期します。この設定は、Google Cloud StorageバケットからS3、Google Cloud Storage、Azure BLOBストレージ、StorageGRID 、またはIBMストレージに同期する場合に使用できます。
+
+データブローカーに関連付けられているサービスアカウントでこの設定を使用するには、次の権限が必要です。
+
+[source, json]
+----
+- pubsub.subscriptions.consume
+- pubsub.subscriptions.create
+- pubsub.subscriptions.delete
+- pubsub.subscriptions.list
+- pubsub.topics.attachSubscription
+- pubsub.topics.create
+- pubsub.topics.delete
+- pubsub.topics.list
+- pubsub.topics.setIamPolicy
+- storage.buckets.update
+----
+link:task-creating-relationships.html#settings["Continuous Syncの詳細については、こちらをご覧ください"]。
+
+
+
+=== 新しいGoogle Cloudリージョンサポート
+
+Cloud Sync データブローカーがGoogle Cloudの次のリージョンでサポートされるようになりました。
+
+* コロンバス（us-east5）
+* ダラス（US -サウス1）
+* マドリード（ヨーロッパ-南西部1）
+* ミラノ（ヨーロッパ-西8）
+* パリ（ヨーロッパ-西9区）
+
+
+
+
+=== 新しいGoogle Cloudマシンタイプ
+
+Google Cloudのデータブローカーのデフォルトのマシンタイプは、n2 -標準-4になりました。
+
+
+
 == 2022年6月6日
 
 

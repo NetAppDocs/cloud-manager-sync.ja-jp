@@ -658,7 +658,6 @@
   <block id="9177317d32a41a0982be70109425240b" category="section-title">データブローカー VM インスタンスの詳細</block>
   <block id="c233ea2db8aa00ac96e4e0317d97f7ed" category="paragraph">Cloud Sync は、 Google Cloud に次の構成でデータブローカーを作成します。</block>
   <block id="3ea4bf9da7622edeeae1bf80e9c5cded" category="list-text">マシンのタイプ</block>
-  <block id="cc5a0182c13643bf47b7fb87ac22c232" category="list-text">N1-standard-4</block>
   <block id="9f101c0e6e5929a04c9e7663fdf91eda" category="list-text">15 GB</block>
   <block id="935b9daeec310c8e2291d043d3e14f44" category="list-text">Red Hat Enterprise Linux 7.7</block>
   <block id="f3796c63e27caa7881ad0844ee9e9544" category="list-text">20 GB HDD pd-standard</block>
@@ -1491,12 +1490,9 @@
   <block id="37e1492974d1c0a4febae33433a14d3f" category="list-text">* Tags/Metadata*ページで、Azure BLOBコンテナにコピーされるオブジェクトに設定するBLOBインデックスタグを指定できます。以前は、関係のメタデータしか指定できませんでした。</block>
   <block id="bb775e1249cce6f8004e5212d3f37d10" category="paragraph">これらのオプションは、Azure Blobがターゲットで、ソースがAzure BlobエンドポイントまたはS3互換エンドポイント（S3、StorageGRID 、IBM Cloud Object Storage）の場合にサポートされます。</block>
   <block id="6e272326d37ff30b30c39df1796c1047" category="list-text">継続的同期</block>
-  <block id="8ed3a39cc9f2a70ec95bb16dd2f2fb23" category="list-text">初期データ同期が完了すると、Cloud Sync はソースS3バケットで変更をリスンし、ターゲットへの変更が発生した場合はその変更を継続的に同期します。ソースを定期的に再スキャンする必要はありません。</block>
-  <block id="81e275e8d051ed5b97b6b40caeb6e335" category="paragraph">この設定は、同期関係を作成する場合、およびS3バケットからS3、Google Cloud Storage、Azure BLOBストレージ、StorageGRID 、またはIBMストレージに同期する場合にのみ使用できます。</block>
   <block id="2be3dcdda5218111239a3d0174add0a9" category="paragraph">この設定を有効にすると、他の機能に次のように影響します。</block>
   <block id="cf6e8568cffe2257079f8cf83e628dad" category="list-text">同期スケジュールが無効になっています。</block>
   <block id="ff156b37c42c21d99850e977fcdb1ebd" category="list-text">次の設定がデフォルト値に戻ります。同期タイムアウト、最近変更されたファイル、更新日。</block>
-  <block id="f60a1149c02808459c5643cc5df3f925" category="list-text">サイズでフィルタは、コピーイベントに対してのみアクティブになります（削除イベントに対してはアクティブになりません）。</block>
   <block id="06188761055a99a60d4ecac698ce5c29" category="list-text">関係を作成したあとは、関係を高速化または削除する必要があります。同期の中止、設定の変更、レポートの表示はできません。</block>
   <block id="471d3dbea565333e7aac2e693d15e28e" category="paragraph">ターゲットにAzure BlobまたはS3互換エンドポイント（S3、StorageGRID 、IBM Cloud Object Storage）を含む同期関係では、タグのコピーがサポートされます。</block>
   <block id="19656389ea4b802da6413eff0a250187" category="inline-link-macro">同期関係を作成するときに、[オブジェクトのコピー]設定を有効にします</block>
@@ -1506,4 +1502,28 @@
   <block id="580e905670d084cfe8e8e4ce2cd2899b" category="list-text">Azure Governmentリージョン</block>
   <block id="ae54a5c026f31ada088992587d92cb3a" category="list-text">中国</block>
   <block id="cbe97248e70516b3413b9658af8e4825" category="list-text">Glacierの柔軟な取得</block>
+  <block id="1511b856d0328cfba458b8f83c2e94e3" category="section-title">2022年7月3日</block>
+  <block id="59db2d8d08645826b1c034be277c61d2" category="section-title">Azure Data Lake Storage Gen2のサポート</block>
+  <block id="c7b46a2bde58e21272436d4c94238e15" category="paragraph">NFSサーバまたはSMBサーバからAzure Data Lake Storage Gen2へデータを同期できるようになりました。</block>
+  <block id="20a2ab980685308347c082aec3253ed9" category="paragraph">Azureデータレイクを含む同期関係を作成する場合は、Cloud Sync にストレージアカウントの接続文字列を指定する必要があります。共有アクセスシグニチャ（SAS）ではなく、通常の接続文字列である必要があります。</block>
+  <block id="ebf5fe0ded517668f74c4f41da278835" category="section-title">Google Cloud Storageからの継続的な同期</block>
+  <block id="6ce39114bc116067ef30366e7df90870" category="paragraph">ソースのGoogle Cloud Storageバケットからクラウドストレージターゲットへ、継続的な同期設定がサポートされるようになりました。</block>
+  <block id="fd36af2b64264c3f7fb77364a0046eb8" category="paragraph">Cloud Sync は、初回のデータ同期後、ソースのGoogle Cloud Storageバケットで変更をリスンし、変更が発生した場合はターゲットに継続的に同期します。この設定は、Google Cloud StorageバケットからS3、Google Cloud Storage、Azure BLOBストレージ、StorageGRID 、またはIBMストレージに同期する場合に使用できます。</block>
+  <block id="5f5f25c6813ee0b01f552cd13dcebec9" category="paragraph">データブローカーに関連付けられているサービスアカウントでこの設定を使用するには、次の権限が必要です。</block>
+  <block id="81ad4f0de90ee8a7305d0fd7751df796" category="section-title">新しいGoogle Cloudリージョンサポート</block>
+  <block id="d38ece9df5f99d11a5e7597c6f6c34f2" category="paragraph">Cloud Sync データブローカーがGoogle Cloudの次のリージョンでサポートされるようになりました。</block>
+  <block id="db760e7471192daa123eed31bfba312d" category="list-text">コロンバス（us-east5）</block>
+  <block id="ad6033c8e4eda00017eca167a149ced4" category="list-text">ダラス（US -サウス1）</block>
+  <block id="82e8338c73d6540f48f2e0cc8d035511" category="list-text">マドリード（ヨーロッパ-南西部1）</block>
+  <block id="4b14bbd178377e932c7e97664c276be7" category="list-text">ミラノ（ヨーロッパ-西8）</block>
+  <block id="1a1145c860165dcd96b82eb7d32cd59f" category="list-text">パリ（ヨーロッパ-西9区）</block>
+  <block id="66c941bf286fd505b009d484ca94a594" category="section-title">新しいGoogle Cloudマシンタイプ</block>
+  <block id="32ddf7d830e3a5092074c4f9bb211736" category="paragraph">Google Cloudのデータブローカーのデフォルトのマシンタイプは、n2 -標準-4になりました。</block>
+  <block id="80b8bec2e4ce95cb7a2f98a49ff8964c" category="list-text">Cloud Sync は、初回のデータ同期後、ソースのS3バケットまたはGoogle Cloud Storageバケットで変更をリスンし、変更が発生した場合はターゲットに継続的に同期します。ソースを定期的に再スキャンする必要はありません。</block>
+  <block id="f3705b49b8b44367d9a208662d64b1e0" category="paragraph">この設定は、同期関係を作成する場合、およびS3バケットまたはGoogle Cloud StorageからS3、Google Cloud Storage、Azure Blob Storage、StorageGRID 、IBM Storageへの同期でのみ使用できます。</block>
+  <block id="ae067a0352a2b892590442ce8932ed20" category="list-text">S3がソースの場合、サイズでのフィルタはコピーイベントに対してのみアクティブになります（削除イベントではアクティブになりません）。</block>
+  <block id="218f5307b8ee8bb2d446b8572cd40e9f" category="list-text">Azure Data Lake Storage Gen2</block>
+  <block id="e83655905b13c4a3bc8d7de2a55ecea8" category="inline-link-macro">継続的同期オプションの詳細については、こちらをご覧ください</block>
+  <block id="3fb0e4028062069b21887e1408a76464" category="list-text">「pubsub.*」権限と「storage.enable」は、Google Cloud Storageから別のクラウドストレージ上の同期関係に対してContinuous Sync設定を有効にする場合にのみ必要です。 <block ref="5354423db3737fe63814ca7ea57f2c4c" category="inline-link-macro-rx"></block>。</block>
+  <block id="88ba83f191bd27de24492d3f347d8add" category="list-text">N2 - 標準 -4</block>
 </blocks>

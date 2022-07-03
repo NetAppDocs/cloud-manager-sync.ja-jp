@@ -139,6 +139,12 @@ image:screenshot_connection_string_sas.gif["「は、共有アクセス署名を
 
 
 
+== Azure Data Lake Storage Gen2
+
+Azureデータレイクを含む同期関係を作成する場合は、Cloud Sync にストレージアカウントの接続文字列を指定する必要があります。共有アクセスシグニチャ（SAS）ではなく、通常の接続文字列である必要があります。
+
+
+
 == Azure NetApp Files の要件
 
 Azure NetApp Files との間でデータを同期する場合は、 Premium または Ultra サービスレベルを使用します。ディスクのサービスレベルが Standard の場合は、エラーやパフォーマンスの問題が発生することがあります。

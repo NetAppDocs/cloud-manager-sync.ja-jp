@@ -49,6 +49,7 @@ Cloud Sync でサポートされるストレージタイプは次のとおりで
 * ONTAP 対応の Amazon FSX
 * Amazon S3
 * Azure Blob の略
+* Azure Data Lake Storage Gen2
 * Azure NetApp Files の特長
 * Box （プレビュー版として利用可能）
 * Cloud Volumes Service
